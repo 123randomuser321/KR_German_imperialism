@@ -1,0 +1,59 @@
+If this is all on one line, blame Windows.
+### notes
+### by MEEEB
+### v1
+
+Hello reader!
+
+This doc is quick rundown on sources plus some general dev notes.
+
+
+Sources:
+
+Reichskriegsflagge: https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/War_Ensign_of_Germany_%281903-1918%29.svg/1280px-War_Ensign_of_Germany_%281903-1918%29.svg.png
+Ottoman Imperial flag: https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ottoman_Empire.svg/1200px-Flag_of_the_Ottoman_Empire.svg.png
+Turkish National flag: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/1200px-Flag_of_Turkey.svg.png
+
+
+General notes:
+
+This mod gives the German Empire, as well as its subjects, some form of interaction with the German sphere of influence.
+That's the goal, at least.
+
+As of now, this only covers some equipment-based decisions on Germany's side, so:
+
+--->>>[WIP]<<<---
+
+
+Files added:
+
+/common/decisions/categories/KR_German_imperialism_decision_categories.txt
+/common/decisions/KR_German_imperialism_decisions.txt
+/events/KR_German_imperialism_events.txt
+/gfx/flags/CON.tga
+/gfx/flags/CON_authoritarian_democrat.tga
+/gfx/flags/CON_national_populist.tga
+/gfx/flags/CON_paternal_autocrat.tga
+/gfx/flags/medium/CON.tga
+/gfx/flags/medium/CON_authoritarian_democrat.tga
+/gfx/flags/medium/CON_national_populist.tga
+/gfx/flags/medium/CON_paternal_autocrat.tga
+/gfx/flags/small/CON.tga
+/gfx/flags/small/CON_authoritarian_democrat.tga
+/gfx/flags/small/CON_national_populist.tga
+/gfx/flags/small/CON_paternal_autocrat.tga
+/localisation/KR_German_imperialism_decision_categories_l_english.yml
+/localisation/KR_German_imperialism_decisions_l_english.yml
+/localisation/KR_German_imperialism_events_l_english.yml
+/notes_by_MEEEB.txt (this file)
+
+
+Dev notes:
+
+This still has a long way togo.
+
+FYI: I will probably use this mod to learn certin things about modding HoI4, so if this turns into a shitfest:
+You have been warned.
+
+
+ - MEEEB

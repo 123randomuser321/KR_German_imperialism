@@ -1,0 +1,127 @@
+### Events for 'Kaiserreich SubMod - German Imperialism'
+### by MEEEB
+### v1
+
+### Note:
+### As soon as I get a grip on reasonable dimensions of equipment the numbers will be revisited.
+### As soon as I figure out the correct way to handle tech, the techs will also change (probably).
+
+### namespace
+add_namespace = gerimperialism
+### done
+
+
+### Event for German subjects recieving infantry equipment
+
+country_event = {
+	id = gerimperialism.1
+	title = gerimperialism.1.t
+	desc = gerimperialism.1.d
+
+	is_triggered_only = yes
+
+	option = { # GER sends 500 base inf equipment to the subject
+	name = gerimperialism.1.a
+	GER = {
+	send_equipment = {
+	equipment = infantry_equipment_0
+	amount = 500 # maybe change later
+	target = ROOT
+	}
+	}
+	}
+}
+
+### done
+
+### Event for German subjects recieving artillery
+
+country_event = {
+	id = gerimperialism.2
+	title = gerimperialism.2.t
+	desc = gerimperialism.2.d
+
+	is_triggered_only = yes
+
+	option = { # GER sends 100 base artillery to the subject
+	name = gerimperialism.2.a
+	GER = {
+	send_equipment = {
+	equipment = artillery_equipment_1
+	amount = 100 # change later
+	target = ROOT
+	}
+	}
+	}
+}
+
+### done
+
+### Event for German subjects recieving support equipment
+
+country_event = {
+	id = gerimperialism.3
+	title = gerimperialism.3.t
+	desc = gerimperialism.3.d
+
+	is_triggered_only = yes
+
+	option = { # GER sends 100 support equipment to the subject
+	name = gerimperialism.3.a
+	GER = {
+	send_equipment = {
+	equipment = support_equipment_1
+	amount = 100 # change later
+	target = ROOT
+	}
+	}
+	}
+}
+
+### done
+
+### Event for German subjects recieving anti-air artillery
+
+country_event = {
+	id = gerimperialism.4
+	title = gerimperialism.4.t
+	desc = gerimperialism.4.d
+
+	is_triggered_only = yes
+
+	option = { # GER sends 25 anti-air to the subject
+	name = gerimperialism.4.a
+	GER = {
+	send_equipment = {
+	equipment = anti_air_equipment_1
+	amount = 25 # change later
+	target = ROOT
+	}
+	}
+	}
+}
+
+### done
+
+### Event for German subjects recieving anti-tank artillery
+
+country_event = {
+	id = gerimperialism.5
+	title = gerimperialism.5.t
+	desc = gerimperialism.5.d
+
+	is_triggered_only = yes
+
+	option = { # GER sends 25 anti-tank to the subject
+	name = gerimperialism.5.a
+	GER = {
+	send_equipment = {
+	equipment = anti_tank_equipment_1
+	amount = 25 # change later
+	target = ROOT
+	}
+	}
+	}
+}
+
+### done

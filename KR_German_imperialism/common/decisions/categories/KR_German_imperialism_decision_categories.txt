@@ -1,0 +1,23 @@
+### Decision categories for 'Kaiserreich SubMod - German Imperialism'
+### by MEEEB
+### v1
+
+### General German imperialism
+
+german_imperialism = {
+	available = {
+	tag = GER
+	}
+}
+
+### end german_imperialism
+
+### general category for German subjects
+
+german_subject_cat = {
+	available = {
+	is_subject_of = GER
+	}
+}
+
+### end german_subject_cat

@@ -1,0 +1,35 @@
+﻿### loc for events of 'Kaiserreich SubMod - German Imperialism'
+### by MEEEB
+### v1
+
+l_english:
+
+### gerimperialism.1
+gerimperialism.1.t:0 "A shipment from [GER.GetNameDef]"
+gerimperialism.1.d:0 "Our benfactors in [GER.Capital.GetName] decided to aid our armament efforts and are willing to gift us rifles and other infantry equipment."
+gerimperialism.1.a:0 "Great! Send them to our arsenals immediately!"
+### gerimperialism.1 done
+
+### gerimperialism.2
+gerimperialism.2.t:0 "A shipment from [GER.GetNameDef]"
+gerimperialism.2.d:0 "Our benfactors in [GER.Capital.GetName] decided to aid our armament efforts and are willing to gift us artillery and field cannons."
+gerimperialism.2.a:0 "This will improve our offensive capabilities quite a bit."
+### gerimperialism.2 done
+
+### gerimperialism.3
+gerimperialism.3.t:0 "A shipment from [GER.GetNameDef]"
+gerimperialism.3.d:0 "Our benefactors in [GER.Capital.GetName] claimed that our armed forces lack medical supplies and necessary support equipment such as radios and decided to put an end to that."
+gerimperialism.3.a:0 "Let us ignore the implicated accusation and accept their gift."
+### gerimperialism.3 done
+
+### gerimperialism.4
+gerimperialism.4.t:0 "A shipment from [GER.GetNameDef]"
+gerimperialism.4.d:0 "Our benefactors in [GER.Capital.GetName] have advised us to prepare for aerial warfare and are willing to supply is with ground-based defenses."
+gerimperialism.4.a:0 "They do seem serious. Take the cannons and prepare accordingly."
+### gerimperialism.4 done
+
+### gerimperialism.5
+gerimperialism.5.t:0 "A shipment from [GER.GetNameDef]"
+gerimperialism.5.d:0 "Our benefactors in [GER.Capital.GetName] have warned us about ever-improving tanks and want to prepare us accordingly."
+gerimperialism.5.a:0 "Take the guns and prepare. No tank shall break through our lines!"
+### gerimperialism.5 done
