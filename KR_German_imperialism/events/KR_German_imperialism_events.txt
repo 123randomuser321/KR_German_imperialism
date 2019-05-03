@@ -125,3 +125,39 @@ country_event = {
 }
 
 ### done
+
+#### Reminder that I need todo something regarding waning influence et al
+#
+#country_event = { # Protests against German influence
+#	id = gerimperialism.x
+#	title = gerimperialism.x.t
+#	desc = gerimperialism.x.d
+#
+#	trigger = {
+#	is_subject_of = GER
+#	has_stability < 0.3 # subject to change, see GEA
+#	NOT = {
+#	OR = {
+#	tag = GEA # German East Asia
+#	tag = MAF # Mittelafrika
+#	tag = AOG # AOG
+#	}
+#	}
+#	}
+#
+#	mean_time_to_happen = {
+#	days = 30
+#
+#	modifier = {
+#	factor = 0.5
+#	has_stability < 0.2
+#	}
+#	}
+#
+#	option = {
+#	name = gerimperialism.x.a # lose some stuff
+#	add_political_power = -20
+#	}
+#}
+#
+#### Reminder done (this event works, so go ahead, if you want to use it; it isn't localized)

@@ -4,12 +4,44 @@
 
 l_english:
 
-### german_imperialism
+### german_imperialism in general
 german_imperialism:0 "Our Place In The Sun"
 german_imperialism_desc:0 "With a place in the sun finally achieved, certain tasks regarding the security of our realm at home and beyond may arise."
 ### german_imperialism end
 
-### german_subject_cat
-german_subject_cat:0 "Inside the German realm"
-german_subject_cat_desc:0 "Now that we find ourselves in the shadow of the German eagle, we have certain duties. And if we are able to play our cards right, opportunities may wait for us..."
-### german_subject_cat end
+### PgmU
+german_PgmU:0 "Mutual Military Assistance Program"
+german_PgmU_desc:0 "The 'Programm für gegenseitige militärische Unterstützungsmaßnahmen', short PgmU, is an organized network of military infrastructure and facilities inside our sphere of influence.\n\nBy using said network, we can more efficiently deliver military aid and organize forces over both multiple command structures and large swaths of land."
+### PgmU end
+
+### German Imperialism in specific tags
+### BAT
+german_BAT:0 "Matters of [BAT.GetNameDef]"
+german_BAT_desc:0 "Our subjects require constant attention and supervision. Even the domain of Adolf Friedrich, the most German of our subjects, is no exception."
+### BEL
+german_BEL:0 "Matters of [BEL.GetNameDef]"
+german_BEL_desc:0 "Flanders-Wallonia is, without a doubt, a delicate subject. While its creation was most certainly necessary, our western frontier is far from perfect."
+### LIT
+german_LIT:0 "Matters of [LIT.GetNameDef]"
+german_LIT_desc:0 "Lithuania is a tough nut to crack. While we liberated them from Russian oppression, they are far from grateful and thus a pain to deal with."
+### WHR
+german_WHR:0 "Matters of [WHR.GetNameDef]"
+german_WHR_desc:0 "Initially, White Ruthenia was a successful domain of ours. Sadly, the last few years have disappointed our collective expectations, thus requiring our attention."
+### MAF
+german_MAF:0 "Matters of [MAF.GetNameDef]"
+german_MAF_desc:0 "While it was no mistake to send more problematic members of society to Africa, this doesn't mean we should ignore the events in such a rich area."
+### MOR
+german_MOR:0 "Matters of [MOR.GetNameDef]"
+german_MOR_desc:0 "The... 'acquisition' of Morocco may be considered unnecessary by some individuals, and [MOR.GetNameDef] is certainly in a bothersome situation. One, however, cannot deny their potential use."
+### AOG
+german_AOG:0 "Matters of [AOG.GetNameDef]"
+german_AOG_desc:0 "As our primary source of income in East Asia and a useful way of leveraging [LEP.GetNameDef] against [QIE.GetNameDef], [AOG.GetNameDef] is more than worthy of our attention and resources."
+### GEA
+german_GEA:0 "Matters of [GEA.GetNameDef]"
+german_GEA_desc:0 "Though not formally a state on its own, [GEA.GetNameDef] is, out of necessity, run as such. While this takes a lot of weight of our shoulders, an occasional intervention may still be required, considering the less than ideal level of administration."
+### German Imperialism in specific tags end
+
+#### german_subject_cat
+#german_subject_cat:0 "Inside the German realm"
+#german_subject_cat_desc:0 "Now that we find ourselves in the shadow of the German eagle, we have certain duties. And if we are able to play our cards right, opportunities may wait for us..."
+#### german_subject_cat end

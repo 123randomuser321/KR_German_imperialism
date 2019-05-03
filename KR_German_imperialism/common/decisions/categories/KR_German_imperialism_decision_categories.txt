@@ -1,8 +1,12 @@
 ### Decision categories for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1
+### v1 rev1
+### added subcategories (for overlord)
+### more comments
 
 ### General German imperialism
+### Is used to unlock stuff for subcategories
+### Is also used to do things that affect every subject and/or ally
 
 german_imperialism = {
 	available = {
@@ -12,12 +16,125 @@ german_imperialism = {
 
 ### end german_imperialism
 
-### general category for German subjects
+### PgmU - Programm für gegenseitige militärische Unterstützungsmaßnahmen
 
-german_subject_cat = {
+german_PgmU = {
 	available = {
+	tag = GER
+	has_global_flag = GER_military_aid_program
+	}
+} 
+
+### PgmU end
+
+### German Imperialism - specific subjects
+
+### Initial subjects first
+
+### Europe
+
+### German Imperialism in the Baltic Duchy (BAT)
+
+german_BAT = {
+	available = {
+	tag = GER
+	BAT = {
 	is_subject_of = GER
+	}
 	}
 }
 
-### end german_subject_cat
+### German Imperialism in Flanders-Wallonia (BEL)
+
+german_BEL = {
+	available = {
+	tag = GER
+	BEL = {
+	is_subject_of = GER
+	}
+	}
+}
+
+### German Imperialism in Lithuania (LIT)
+
+german_LIT = {
+	available = {
+	tag = GER
+	LIT = {
+	is_subject_of = GER
+	}
+	}
+}
+
+### German Imperialism in White Ruthenia (WHR)
+
+german_WHR = {
+	available = {
+	tag = GER
+	WHR = {
+	is_subject_of = GER
+	}
+	}
+}
+
+### Africa
+
+### German Imperialism in Mittelafrika
+
+german_MAF = {
+	available = {
+	tag = GER
+	MAF = {
+	is_subject_of = GER
+	}
+	}
+}
+
+### German Imperialism in Morocco (MOR)
+
+german_MOR = {
+	available = {
+	tag = GER
+	MOR = {
+	is_subject_of = GER
+	}
+	}
+}
+
+### East Asia
+
+### German Imperialism in China(?) (AOG)
+### this probably won't recieve any content before the China rework
+
+german_AOG = {
+	available = {
+	tag = GER
+	AOG = {
+	is_subject_of = GER
+	}
+	}
+}
+
+### German Imperialism in South East Asia (GEA)
+
+german_GEA = {
+	available = {
+	tag = GER
+	GEA = {
+	is_subject_of = GER
+	}
+	}
+}
+
+### German Imperialism - specific subjects end
+
+
+#### general category for German subjects
+#
+#german_subject_cat = {
+#	available = {
+#	is_subject_of = GER
+#	}
+#}
+#
+#### end german_subject_cat

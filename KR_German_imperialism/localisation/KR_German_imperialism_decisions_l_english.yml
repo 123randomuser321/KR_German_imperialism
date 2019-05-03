@@ -1,32 +1,13 @@
 ﻿### loc for decisions of 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1
+### v1 rev1
+### removed initial german_imperialism decisions
 
 l_english:
 
 ### german_imperialism
 
-### equipment_ger_subjects_rifles
-equipment_ger_subjects_rifles:0 "Arming our subjects - Rifles"
-equipment_ger_subjects_rifles_desc:0 "As our subjects are not even remotely on our level of armament, they may need a helping hand."
-### equipment_ger_subjects end
-
-### equipment_ger_subjects_artillery
-equipment_ger_subjects_artillery:0 "Arming our subjects - Artillery"
-equipment_ger_subjects_artillery_desc:0 "Our subjects are lacking artillery. If we want them to effectively shell enemy positions, they might need our material support."
-### equipment_ger_subjects_artillery end
-
-### equipment_ger_subjects_support
-equipment_ger_subjects_support:0 "Arming our subjects - Support Equipment"
-equipment_ger_subjects_support_desc:0 "Our subjects are lacking necessary equipment such as radios, packed medical supplies and more. This state of affairs cannot persist."
-### equipment_ger_subjects_support end
-
-### equipment_ger_subjects_antiair
-equipment_ger_subjects_antiair:0 "Arming our subjects - Anti-Air Artillery"
-equipment_ger_subjects_antiair_desc:0 "The power of flight is, especially in combat, not to be taken lightly. As such, it is necessary for our subjects to be able to skewer our enemies' wings."
-### equipment_ger_subjects_antiair end
-
-### equipment_ger_subjects_antitank
-equipment_ger_subjects_antitank:0 "Arming our subjects - Anti-Tank Artillery"
-equipment_ger_subjects_antitank_desc:0 "While largely unreliable in the Great War, tanks have since improved to be a recognizable threat. Our subjects shall come prepared."
-### equipment_ger_subjects_antitank end
+### GER_establish_military_assistance
+GER_establish_military_assistance:0 "Establish the 'Mutual Military Assistance Program' (PgmU)"
+GER_establish_military_assistance_desc:0 "In hopes of increasing our military effiency, we can ask our advisors to concieve a program for mutual military aid with our subjects."
+### GER_establish_military_assistance end

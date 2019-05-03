@@ -1,151 +1,69 @@
 ### Decisions for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1
+### v1 rev1
+### removed initial german_imperialism decisions
 
 ### german_imperialism
 
 german_imperialism = {
-	equipment_ger_subjects_rifles = { # send basic equipment to all subjects
+	
+	GER_establish_military_assistance = { # unlocks decisions for military support re subjects
 	
 	visible = {
-	num_subjects > 0 # Found no doc for has_subject, so I'll use this
-	has_tech = infantry_equipment_0
-	}
-	
-	available = {
 	has_equipment = {
-	infantry_equipment_0 > 0 # change later
+	infantry_equipment_0 > 1000
 	}
 	}
 	
-	cost = 10
+	cost = 100 # subject to change
 
-	days_re_enable = 7
-	
-	complete_effect = {
-	every_country = {
-	limit = {
-	is_subject_of = GER
-	has_tech = infantry_equipment_0
-	}
-	country_event = gerimperialism.1
-	}
+	fire_only_once = yes
+	days_remove = 28 # arbitrary number, may change
+
+	remove_effect = {
+	set_global_flag = GER_military_aid_program # note to self: GEA, MAF and AOG should not be eligible, since they are technically part of the German state/economy, so they will be handled in another way
 	}
 	}
 
 
-	equipment_ger_subjects_artillery = { # send artillery to all subjects
+	GER_hijack_industrial_recovery = {
 
 	visible = {
-	num_subjects > 0 # see equipment_ger_subjects_rifles
-	has_tech = artillery_equipment_1
-	}
-
-	available = {
-	has_equipment = {
-	artillery_equipment_1 > 0
+	has_global_flag = black_monday
+	OR = {
+	has_idea = GER_black_monday
+	has_idea = GER_black_monday1
+	has_idea = GER_black_monday2
 	}
 	}
 
 	cost = 10
 
-	days_re_enable = 7
+	fire_only_once = yes
 
 	complete_effect = {
-	every_country = {
-	limit = {
-	is_subject_of = GER
-	has_tech = artillery_equipment_1
-	}
-	country_event = gerimperialism.2
-	}
+	set_country_flag = GER_industrial_scam
 	}
 	}
 
 
-	equipment_ger_subjects_support = { # send support equipment to all subjects
+	GER_establish_industrial_assistance = {
 
 	visible = {
-	num_subjects > 0 # see equipment_ger_subjects_rifles
-	has_tech = support_equipment_1
-	}
-
-	available = {
-	has_equipment = {
-	support_equipment_1 > 0
+	has_global_flag = black_monday
+	NOT = {
+	has_idea = GER_black_monday
+	has_idea = GER_black_monday1
+	has_idea = GER_black_monday2
 	}
 	}
 
-	cost = 10
+	cost = 10 # subject to change
 
-	days_re_enable = 7
+	fire_only_once = yes
 
 	complete_effect = {
-	every_country = {
-	limit = {
-	is_subject_of = GER
-	has_tech = support_equipment_1
-	}
-	country_event = gerimperialism.3
-	}
-	}
-	}
-
-
-	equipment_ger_subjects_antiair = { # send anti-air to all subjects
-
-	visible = {
-	num_subjects > 0 # see equipment_ger_subjects_rifles
-	has_tech = anti_air_equipment_1
-	}
-
-	available = {
-	has_equipment = {
-	anti_air_equipment_1 > 0
-	}
-	}
-
-	cost = 10
-
-	days_re_enable = 7
-
-	complete_effect = {
-	every_country = {
-	limit = {
-	is_subject_of = GER
-	has_tech = anti_air_equipment_1
-	}
-	country_event = gerimperialism.4
-	}
-	}
-	}
-
-
-	equipment_ger_subjects_antitank = { # send anti-tank to all subjects
-
-	visible = {
-	num_subjects > 0 # see equipment_ger_subjects_rifles
-	has_tech = anti_tank_equipment_1
-	}
-
-	available = {
-	has_equipment = {
-	anti_tank_equipment_1 > 0
-	}
-	}
-
-	cost = 10
-
-	days_re_enable = 7
-
-	complete_effect = {
-	every_country = {
-	limit = {
-	is_subject_of = GER
-	has_tech = anti_tank_equipment_1
-	}
-	country_event = gerimperialism.5
-	}
+	set_global_flag = GER_industrial_support
 	}
 	}
 }
