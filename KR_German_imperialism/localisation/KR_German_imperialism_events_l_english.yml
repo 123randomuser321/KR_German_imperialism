@@ -1,35 +1,67 @@
 ﻿### loc for events of 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1
+### v1 rev2
+### removed old loc
+### added loc for new equipment events
+### added loc for industrial recovery
 
 l_english:
 
-### gerimperialism.1
-gerimperialism.1.t:0 "A shipment from [GER.GetNameDef]"
-gerimperialism.1.d:0 "Our benfactors in [GER.Capital.GetName] decided to aid our armament efforts and are willing to gift us rifles and other infantry equipment."
-gerimperialism.1.a:0 "Great! Send them to our arsenals immediately!"
-### gerimperialism.1 done
+### initial equipment requests
 
-### gerimperialism.2
-gerimperialism.2.t:0 "A shipment from [GER.GetNameDef]"
-gerimperialism.2.d:0 "Our benfactors in [GER.Capital.GetName] decided to aid our armament efforts and are willing to gift us artillery and field cannons."
-gerimperialism.2.a:0 "This will improve our offensive capabilities quite a bit."
-### gerimperialism.2 done
+### infantry
+gerimperialism.1.t:0 "[FROM.GetNameDef] requests rifles and associated equipment"
+gerimperialism.1.d:0 "[FROM.GetNameDef] has approached us with a request for infantry equipment such as rifles, citing their lack of an appropriate supply of said material."
+gerimperialism.1.a:0 "They asked and shall recieve."
+gerimperialism.1.b:0 "This is their own problem."
+gerimperialism.1.tb:0 "While powerless against you, this will still hurt your subject."
 
-### gerimperialism.3
-gerimperialism.3.t:0 "A shipment from [GER.GetNameDef]"
-gerimperialism.3.d:0 "Our benefactors in [GER.Capital.GetName] claimed that our armed forces lack medical supplies and necessary support equipment such as radios and decided to put an end to that."
-gerimperialism.3.a:0 "Let us ignore the implicated accusation and accept their gift."
-### gerimperialism.3 done
+### support equipment
+gerimperialism.2.t:0 "[FROM.GetNameDef] requests support equipment"
+gerimperialism.2.d:0 "[FROM.GetNameDef] has requested a shipment of medical supplies and related materials, claiming to be unable to sufficiently supply their troops."
+gerimperialism.2.a:0 "They shall have it."
+gerimperialism.2.b:0 "A state should be able to keep its own troops alive. Denied."
+gerimperialism.2.tb: "While powerless against you, this will still hurt your subject."
 
-### gerimperialism.4
-gerimperialism.4.t:0 "A shipment from [GER.GetNameDef]"
-gerimperialism.4.d:0 "Our benefactors in [GER.Capital.GetName] have advised us to prepare for aerial warfare and are willing to supply is with ground-based defenses."
-gerimperialism.4.a:0 "They do seem serious. Take the cannons and prepare accordingly."
-### gerimperialism.4 done
+### artillery
+gerimperialism.3.t:0 "[FROM.GetNameDef] requests field guns"
+gerimperialism.3.d:0 "[FROM.GetNameDef] asked as to deliver a shipment of field artillery to them, claiming their own arsenal to be underwhelimg and generally outdated."
+gerimperialism.3.a:0 "Send the shipment to [FROM.Capital.GetName]."
+gerimperialism.3.b:0 "Artillery, even if old, is sufficient."
+gerimperialism.3.tb:0 "While powerless against you, this will still hurt your subject."
 
-### gerimperialism.5
-gerimperialism.5.t:0 "A shipment from [GER.GetNameDef]"
-gerimperialism.5.d:0 "Our benefactors in [GER.Capital.GetName] have warned us about ever-improving tanks and want to prepare us accordingly."
-gerimperialism.5.a:0 "Take the guns and prepare. No tank shall break through our lines!"
-### gerimperialism.5 done
+### anti-tank
+gerimperialism.4.t:0 "[FROM.GetNameDef] requests anti-tank guns"
+gerimperialism.4.d:0 "Citing the ever-increasing threat of modern armored vehicles, and their own lack of counter-measures, [FROM.GetNameDef] has requested a shipment of anti-tank artillery."
+gerimperialism.4.a:0 "Let us hope their fear is not justified and send the shipment."
+gerimperialism.4.b:0 "Tanks are nowhere near being relevant enough to warrant such precautions."
+gerimperialism.4.tb:0 "While powerless against you, this will still hurt your subject."
+
+### anti-air
+gerimperialism.5.t:0 "[FROM.GetNameDef] requests anti-air artillery"
+gerimperialism.5.d:0 "Fearing attacks from the skies crippling their forces, [FROM.GetNameDef] has requested a shipment of anti-air artillery."
+gerimperialism.5.a:0 "Let them skewer our enemies wings. Accept their request."
+gerimperialism.5.b:0 "We rule the skies. Their fears are not justified."
+gerimperialism.5.tb:0 "While powerless against you, this will still hurt your subject."
+
+### reques denied
+gerimperialism.6.t:0 "[GER.Capital.GetName] denies our request!"
+gerimperialism.6.d:0 "Sadly, our benefactors have denied our humble request.\nWe will need to handle our problem ourselves."
+gerimperialism.6.a:0 "That is indeed a shame."
+
+### initial requests end
+
+
+### industrial recovery events
+
+### strong industries get scammed
+gerimperialism.7.t:0 "German authorities seize industrial assets!"
+gerimperialism.7.d:0 "Citing missing debt payments and moral obligations, officials from various German entities, including companies such as Krupp and the Foreign ministry have announced the 'temporary takeover' of a good sum of factories and industrial equipment."
+gerimperialism.7.a:0 "Outrageous!"
+
+### exploitation stops
+gerimperialism.8.t:0 "Return of seized assets"
+gerimperialism.8.d:0 "German officials have officially returned the promptly seized assets and told us, that our debt returned to 'normal'.\n\nWhile some believe, that they just want to save face, we cannot openly proclaim such things."
+gerimperialism.8.a:0 "As if we weren't struggling with our own problems."
+
+### industrial recovery end

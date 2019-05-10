@@ -1,7 +1,8 @@
 ﻿### loc for decisions of 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev1
+### v1 rev2
 ### removed initial german_imperialism decisions
+### started loc for industrial recovery
 
 l_english:
 
@@ -11,3 +12,49 @@ l_english:
 GER_establish_military_assistance:0 "Establish the 'Mutual Military Assistance Program' (PgmU)"
 GER_establish_military_assistance_desc:0 "In hopes of increasing our military effiency, we can ask our advisors to concieve a program for mutual military aid with our subjects."
 ### GER_establish_military_assistance end
+
+### GER_hijack_industrial_recovery
+GER_hijack_industrial_recovery:0 "Draft an emergency industrial recovery plan"
+GER_hijack_industrial_recovery_desc:0 "With Black Monday shattering our industrial might, voices in our government demand an immediate industrial recovery plan, at the cost of our subjects, if necessary."
+### GER_hijack_industrial_recovery end
+
+
+### german_industrial_rec
+
+### ger_reassure_banks
+ger_reassure_banks:0 "Calm the banks down"
+ger_reassure_banks_desc:0 "Some may call it a slimy move, but directly approaching the banks may stabilise our ailing monetary system in the long run."
+### ger_reassure_banks end
+
+### ger_exploit_strong_subjects
+ger_exploit_strong_subjects:0 "Exploit our strong client industries"
+ger_exploit_strong_subjects_desc:0 "It may be an unorthodox and barely honorable move, but with certain diplomatic tricks, we will be able to create a buffer for our economy through our most industrialized subjects."
+### ger_exploit_strong_subjects end
+
+
+### german_subject_cat
+
+### request_infantry_equip_ger
+request_infantry_equip_ger:0 "Request infantry equipment from [GER.GetNameDef]"
+request_infantry_equip_ger_desc:0 "We have detected a lack of necessary equipment such as rifles and their ammunition. Maybe we should ask [GER.GetNameDef] for a shipment?"
+### request_infantry_equip_ger end
+
+### request_support_equip_ger
+request_support_equip_ger:0 "Request support equipment from [GER.GetNameDef]"
+request_support_equip_ger_desc:0 "We lack crucial medical goods and other supplies. Maybe our best option too quickly fix this, is to ask [GER.GetNameDef]."
+### request_support_equip_ger end
+
+### request_artillery_ger
+request_artillery_ger:0 "Request artillery and field guns from [GER.GetNameDef]"
+request_artillery_ger_desc:0 "We have a clear lack of artillery, with the ones we do possess being mostly outdated field guns. Some German material might help."
+### request_artillery_ger end
+
+### request_anti_tank_ger
+request_anti_tank_ger:0 "Request anti-tank guns from [GER.GetNameDef]"
+request_anti_tank_ger_desc:0 "Our arsenal of anti-tank artillery is lacking, and [GER.GetNameDef] might have some to spare."
+### request_anti_tank_ger end
+
+### request_anti_air_ger
+request_anti_air_ger:0 "Request anti-air guns from [GER.GetNameDef]"
+request_anti_air_ger_desc:0 "Our arsenal of anti-air artillery is less then satisfying. Maybe a shipment from [GER.GetNameDef] will do the trick?"
+### request_anti_air_ger end

@@ -1,9 +1,8 @@
 If this is all on one line, blame Windows.
 ### notes
 ### by MEEEB
-### v1 rev1
-### GIANT WIP
-### also note re removed files
+### v1 rev2
+### modified a note
 
 Hello reader!
 
@@ -12,7 +11,7 @@ This doc is quick rundown on sources plus some general dev notes.
 
 Sources:
 
-[sources of knowledge will not be quoted]
+[sources of knowledge will not be quoted, yet]
 
 
 General notes:

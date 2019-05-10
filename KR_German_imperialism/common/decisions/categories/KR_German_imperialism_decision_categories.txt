@@ -16,6 +16,7 @@ german_imperialism = {
 
 ### end german_imperialism
 
+
 ### PgmU - Programm für gegenseitige militärische Unterstützungsmaßnahmen
 
 german_PgmU = {
@@ -26,6 +27,20 @@ german_PgmU = {
 } 
 
 ### PgmU end
+
+
+### German temporary industrial recovery for Black Monday
+
+german_industrial_rec = {
+	available = {
+	tag = GER
+	has_country_flag = GER_industrial_rec_plan
+	has_country_flag = GER_black_monday_wow # you are basically paralyzed until Black Week is over
+	}
+}
+
+### German temporary recovery end
+
 
 ### German Imperialism - specific subjects
 
@@ -129,12 +144,12 @@ german_GEA = {
 ### German Imperialism - specific subjects end
 
 
-#### general category for German subjects
-#
-#german_subject_cat = {
-#	available = {
-#	is_subject_of = GER
-#	}
-#}
-#
-#### end german_subject_cat
+### general category for German subjects
+
+german_subject_cat = {
+	available = {
+	is_subject_of = GER
+	}
+}
+
+### end german_subject_cat

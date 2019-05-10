@@ -1,6 +1,8 @@
 ﻿### loc for decision categories of 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1
+### v1 rev1
+### added verious categories
+### formatting
 
 l_english:
 
@@ -9,10 +11,18 @@ german_imperialism:0 "Our Place In The Sun"
 german_imperialism_desc:0 "With a place in the sun finally achieved, certain tasks regarding the security of our realm at home and beyond may arise."
 ### german_imperialism end
 
+
 ### PgmU
 german_PgmU:0 "Mutual Military Assistance Program"
 german_PgmU_desc:0 "The 'Programm für gegenseitige militärische Unterstützungsmaßnahmen', short PgmU, is an organized network of military infrastructure and facilities inside our sphere of influence.\n\nBy using said network, we can more efficiently deliver military aid and organize forces over both multiple command structures and large swaths of land."
 ### PgmU end
+
+
+### German temporary recovery from Black Monday
+german_industrial_rec:0 "Rescuing our Industry"
+german_industrial_rec_desc:0 "Following the decision to enact emergency recovery measures in an attempt to weaken the effects of the Black Week, we now need to mobolize our political capital."
+### German temp recovery end
+
 
 ### German Imperialism in specific tags
 ### BAT
@@ -41,7 +51,7 @@ german_GEA:0 "Matters of [GEA.GetNameDef]"
 german_GEA_desc:0 "Though not formally a state on its own, [GEA.GetNameDef] is, out of necessity, run as such. While this takes a lot of weight of our shoulders, an occasional intervention may still be required, considering the less than ideal level of administration."
 ### German Imperialism in specific tags end
 
-#### german_subject_cat
-#german_subject_cat:0 "Inside the German realm"
-#german_subject_cat_desc:0 "Now that we find ourselves in the shadow of the German eagle, we have certain duties. And if we are able to play our cards right, opportunities may wait for us..."
-#### german_subject_cat end
+### german_subject_cat
+german_subject_cat:0 "Inside the German realm"
+german_subject_cat_desc:0 "Now that we find ourselves in the shadow of the German eagle, we have certain duties. And if we are able to play our cards right, opportunities may wait for us..."
+### german_subject_cat end

@@ -1,17 +1,20 @@
 ### Events for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1
+### v1 rev2
+### removed old notes and events
+### added events for initial equipment requests
 
-### Note:
-### As soon as I get a grip on reasonable dimensions of equipment the numbers will be revisited.
-### As soon as I figure out the correct way to handle tech, the techs will also change (probably).
+
+### all numbers are subject to change
 
 ### namespace
 add_namespace = gerimperialism
 ### done
 
 
-### Event for German subjects recieving infantry equipment
+### initial equipment requests from subjects
+
+### infantry equipment
 
 country_event = {
 	id = gerimperialism.1
@@ -20,21 +23,25 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { # GER sends 500 base inf equipment to the subject
+	option = {
 	name = gerimperialism.1.a
-	GER = {
 	send_equipment = {
-	equipment = infantry_equipment_0
-	amount = 500 # maybe change later
-	target = ROOT
+	type = infantry_weapons # does this work?
+	amount = 500
+	target = FROM # should resolve to the correct subject
 	}
 	}
+
+	option = {
+	name = gerimperialism.1.b
+	hidden_effect = {
+	FROM = { country_event = gerimperialism.6 } # denied request
+	}
+	custom_effect_tooltip = gerimperialism.1.tb
 	}
 }
 
-### done
-
-### Event for German subjects recieving artillery
+### support equipment
 
 country_event = {
 	id = gerimperialism.2
@@ -43,21 +50,25 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { # GER sends 100 base artillery to the subject
+	option = {
 	name = gerimperialism.2.a
-	GER = {
 	send_equipment = {
-	equipment = artillery_equipment_1
-	amount = 100 # change later
-	target = ROOT
+	type = support_weapons
+	amount = 250
+	target = FROM # see above
 	}
 	}
+
+	option = {
+	name = gerimperialism.2.b
+	hidden_effect = {
+	FROM = { country_event = gerimperialism.6 } # denied request
+	}
+	custom_effect_tooltip = gerimperialism.2.tb
 	}
 }
 
-### done
-
-### Event for German subjects recieving support equipment
+### artillery
 
 country_event = {
 	id = gerimperialism.3
@@ -66,21 +77,25 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { # GER sends 100 support equipment to the subject
+	option = {
 	name = gerimperialism.3.a
-	GER = {
 	send_equipment = {
-	equipment = support_equipment_1
-	amount = 100 # change later
-	target = ROOT
+	type = artillery
+	amount = 250
+	target = FROM # see above
 	}
 	}
+
+	option = {
+	name = gerimperialism.3.b
+	hidden_effect = {
+	FROM = { country_event = gerimperialism.6 } # denied request
+	}
+	custom_effect_tooltip = gerimperialism.3.tb
 	}
 }
 
-### done
-
-### Event for German subjects recieving anti-air artillery
+### anti-tank
 
 country_event = {
 	id = gerimperialism.4
@@ -89,21 +104,25 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { # GER sends 25 anti-air to the subject
+	option = {
 	name = gerimperialism.4.a
-	GER = {
 	send_equipment = {
-	equipment = anti_air_equipment_1
-	amount = 25 # change later
-	target = ROOT
+	type = cat_anti_tank
+	amount = 250
+	target = FROM # see above
 	}
 	}
+
+	option = {
+	name = gerimperialism.4.b
+	hidden_effect = {
+	FROM = { country_event = gerimperialism.6 } # denied request
+	}
+	custom_effect_tooltip = gerimperialism.4.tb
 	}
 }
 
-### done
-
-### Event for German subjects recieving anti-tank artillery
+### anti-air
 
 country_event = {
 	id = gerimperialism.5
@@ -112,52 +131,70 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { # GER sends 25 anti-tank to the subject
+	option = {
 	name = gerimperialism.5.a
-	GER = {
 	send_equipment = {
-	equipment = anti_tank_equipment_1
-	amount = 25 # change later
-	target = ROOT
+	type = cat_anti_air
+	amount = 250
+	target = FROM # see above
 	}
 	}
+
+	option = {
+	name = gerimperialism.5.b
+	hidden_effect = {
+	FROM = { country_event = gerimperialism.6 } # denied request
+	}
+	custom_effect_tooltip = gerimperialism.5.tb
 	}
 }
 
-### done
+### request denied
 
-#### Reminder that I need todo something regarding waning influence et al
-#
-#country_event = { # Protests against German influence
-#	id = gerimperialism.x
-#	title = gerimperialism.x.t
-#	desc = gerimperialism.x.d
-#
-#	trigger = {
-#	is_subject_of = GER
-#	has_stability < 0.3 # subject to change, see GEA
-#	NOT = {
-#	OR = {
-#	tag = GEA # German East Asia
-#	tag = MAF # Mittelafrika
-#	tag = AOG # AOG
-#	}
-#	}
-#	}
-#
-#	mean_time_to_happen = {
-#	days = 30
-#
-#	modifier = {
-#	factor = 0.5
-#	has_stability < 0.2
-#	}
-#	}
-#
-#	option = {
-#	name = gerimperialism.x.a # lose some stuff
-#	add_political_power = -20
-#	}
-#}
-#
-#### Reminder done (this event works, so go ahead, if you want to use it; it isn't localized)
+country_event = {
+	id = gerimperialism.6
+	title = gerimperialism.6.t
+	desc = gerimperialism.6.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = gerimperialism.6.a
+	add_political_power = -20
+	}
+}
+
+### provisional end
+
+
+### German industrial recovery events
+
+### most industrialized subjects get screwed over, notification
+
+country_event = {
+	id = gerimperialism.7
+	title = gerimperialism.7.t
+	desc = gerimperialism.7.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = gerimperialism.7.a # begrudgingly accept
+	}
+}
+
+### exploitation stops
+
+country_event = {
+	id = gerimperialism.8
+	title = gerimperialism.8.t
+	desc = gerimperialism.8.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = gerimperialism.8.a # things go back to normal
+	}
+}
+
+### industrial recovery end
