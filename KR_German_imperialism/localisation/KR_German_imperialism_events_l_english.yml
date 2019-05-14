@@ -1,9 +1,7 @@
 ﻿### loc for events of 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev2
-### removed old loc
-### added loc for new equipment events
-### added loc for industrial recovery
+### v1 rev3
+### added some loc for BEL
 
 l_english:
 
@@ -65,3 +63,33 @@ gerimperialism.8.d:0 "German officials have officially returned the promptly sei
 gerimperialism.8.a:0 "As if we weren't struggling with our own problems."
 
 ### industrial recovery end
+
+
+### interactions with specific subjects
+
+### BEL
+
+### Fate of German Wallonia
+gerimperialism.9.t:0 "The Fate of German Wallonia"
+gerimperialism.9.d:0 "The Second Weltkrieg is over. And with it, our official reason for administering the Walloon industry is invalid.\nWhile it might be painful, we must finally decide what to do with this tract of land.\n\nDo we keep and integrate it, or do we return it to [BEL.GetName]?"
+gerimperialism.9.a:0 "We have no need for this. Return the territory."
+gerimperialism.9.ta:0 "This might ease tensions in the West."
+gerimperialism.9.b:0 "Keep it and turn it into something German!"
+gerimperialism.9.tb:0 "If you play your cards right, you will gain a core."
+
+### territory slips through Adalbert's hands
+gerimperialism.10.t:0 "Message from [GER.Capital.GetName]"
+gerimperialism.10.d:0 "The German government has just told us, that [GER.GetNameDef] does not intend to return the Walloon industrial area."
+gerimperialism.10.a:0 "We didn't need this to happen..."
+
+### Charlotte claims German Wallonia
+gerimperialism.11.t:0 "Luxemburg claims German Wallonia"
+gerimperialism.11.d:0 "The Grand Duchy of Luxemburg, part of [GER.GetNameDef] ever since the end of Weltkrieg, has, as of this afternoon, officially laid clame to the German-administered regions of Wallonia.\n\nWith this done, the Bundestag may decide further actions."
+gerimperialism.11.a:0 "Charlotte is doing a great job!"
+gerimperialism.11.ta:0 "German Wallonia will gain a claim by Luxemburg, with the Bundestag deciding on further territorial actions."
+
+### Bundestag ratifies Charlotte's claim
+gerimperialism.12.t:0 "Bundestag ratifies Luxemburg's claim"
+gerimperialism.12.d:0 "The Bundestag has officially recognized the claim of the Grand Duchy of Luxemburg to the German-administered Walloon territories, thus making it an official claim exercised through Germany itself.\n\nWe may now proceed to further integrate said territories."
+gerimperialism.12.a:0 "As expected."
+gerimperialism.12.ta:0 "Germany now officially claim German Wallonia, and can use Luxemburg's claim as a justification."

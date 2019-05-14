@@ -32,6 +32,21 @@ ger_exploit_strong_subjects_desc:0 "It may be an unorthodox and barely honorable
 ### ger_exploit_strong_subjects end
 
 
+### interactions with specific subjects
+
+### BEL
+fate_of_german_wallonia:0 "The Fate of German Wallonia"
+fate_of_german_wallonia_desc:0 "With the Weltkrieg concluded, we must finally decide what to do with our occupied Walloon territories."
+
+prep_integration_741:0 "Prepare for integration of Walloon territories"
+prep_integration_741_desc:0 "Now that we decided to keep our Walloon territories, we must prepare to actually integrate them."
+
+luxemburg_claims_741:0 "Let Charlotte claim the territory"
+luxemburg_claims_741_desc:0 "A small, albeit necessary step towards our goal would be the Grand Duchy of Luxemburg claiming the Walloon territories."
+
+
+
+
 ### german_subject_cat
 
 ### request_infantry_equip_ger

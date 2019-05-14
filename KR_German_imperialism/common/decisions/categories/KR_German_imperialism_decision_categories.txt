@@ -1,8 +1,7 @@
 ### Decision categories for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev1
-### added subcategories (for overlord)
-### more comments
+### v1 rev2
+### added subcategories for subjects
 
 ### General German imperialism
 ### Is used to unlock stuff for subcategories
@@ -43,6 +42,7 @@ german_industrial_rec = {
 
 
 ### German Imperialism - specific subjects
+### includes both categories for GER itself and the subjects
 
 ### Initial subjects first
 
@@ -50,7 +50,7 @@ german_industrial_rec = {
 
 ### German Imperialism in the Baltic Duchy (BAT)
 
-german_BAT = {
+german_BAT = { # master
 	available = {
 	tag = GER
 	BAT = {
@@ -59,9 +59,16 @@ german_BAT = {
 	}
 }
 
+german_BAT_subject = { # subject
+	available = {
+	tag = BAT
+	is_subject_of = GER
+	}
+}
+
 ### German Imperialism in Flanders-Wallonia (BEL)
 
-german_BEL = {
+german_BEL = { # master
 	available = {
 	tag = GER
 	BEL = {
@@ -70,9 +77,16 @@ german_BEL = {
 	}
 }
 
+german_BEL_subject = { # subject
+	available = {
+	tag = BEL # might need to be more specific, since actual Belgium can also be a subject
+	is_subject_of = GER
+	}
+}
+
 ### German Imperialism in Lithuania (LIT)
 
-german_LIT = {
+german_LIT = { # master
 	available = {
 	tag = GER
 	LIT = {
@@ -81,9 +95,16 @@ german_LIT = {
 	}
 }
 
+german_LIT_subject = { # subject
+	available = {
+	tag = LIT
+	is_subject_of = GER
+	}
+}
+
 ### German Imperialism in White Ruthenia (WHR)
 
-german_WHR = {
+german_WHR = { # master
 	available = {
 	tag = GER
 	WHR = {
@@ -92,11 +113,18 @@ german_WHR = {
 	}
 }
 
+german_WHR_subject = { # subject
+	available = {
+	tag = WHR
+	is_subject_of = GER
+	}
+}
+
 ### Africa
 
 ### German Imperialism in Mittelafrika
 
-german_MAF = {
+german_MAF = { # master
 	available = {
 	tag = GER
 	MAF = {
@@ -105,9 +133,16 @@ german_MAF = {
 	}
 }
 
+german_MAF_subject = { # subject
+	available = {
+	tag = MAF
+	is_subject_of = GER
+	}
+}
+
 ### German Imperialism in Morocco (MOR)
 
-german_MOR = {
+german_MOR = { # master
 	available = {
 	tag = GER
 	MOR = {
@@ -116,12 +151,19 @@ german_MOR = {
 	}
 }
 
+german_MOR_subject = { # subject
+	available = {
+	tag = MOR
+	is_subject_of = GER
+	}
+}
+
 ### East Asia
 
 ### German Imperialism in China(?) (AOG)
 ### this probably won't recieve any content before the China rework
 
-german_AOG = {
+german_AOG = { # master
 	available = {
 	tag = GER
 	AOG = {
@@ -130,14 +172,28 @@ german_AOG = {
 	}
 }
 
+german_AOG_subject = { # subject
+	available = {
+	tag = AOG
+	is_subject_of = GER
+	}
+}
+
 ### German Imperialism in South East Asia (GEA)
 
-german_GEA = {
+german_GEA = { # master
 	available = {
 	tag = GER
 	GEA = {
 	is_subject_of = GER
 	}
+	}
+}
+
+german_GEA_subject = { # subject
+	available = {
+	tag = GEA
+	is_subject_of = GER
 	}
 }
 

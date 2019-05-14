@@ -1,9 +1,7 @@
 ### Events for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev2
-### removed old notes and events
-### added events for initial equipment requests
-
+### v1 rev3
+### added some stuff for GER and BEL (mostly German Wallonia)
 
 ### all numbers are subject to change
 
@@ -198,3 +196,84 @@ country_event = {
 }
 
 ### industrial recovery end
+
+
+### interactions with specific subjects
+
+### GER and BEL
+
+country_event = { # The Fate of German Wallonia
+	id = gerimperialism.9 # I may move this later
+	title = gerimperialism.9.t
+	desc = gerimperialism.9.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = gerimperialism.9.a # Do Adalbert a favor and return German Wallonia
+	add_political_power = -50 # it does hurt
+	hidden_effect = {
+	BEL = { transfer_state = 741 } # BEL gets German Wallonia
+	### add some decisions for BEL regarding Walloon seperatism and such things
+	}
+	custom_effect_tooltip = gerimperialism.9.ta
+	}
+
+	option = {
+	name = gerimperialism.9.b # keep the province and its industry
+	add_political_power = -100 # ouch
+	BEL = { country_event = gerimperialism.10 }
+	hidden_effect = { set_country_flag = GER_kept_741 }
+	custom_effect_tooltip = gerimperialism.9.tb
+	}
+}
+
+country_event = { # Adalbert loses the territory, final edition
+	id = gerimperialism.10
+	title = gerimperialism.10.t
+	desc = gerimperialism.10.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = gerimperialism.10.a # begrudgingly concede
+	add_political_power = -100
+	### maybe add an option for counteraction later (e.g. if Adalbert implemented reforms)
+	}
+}
+
+country_event = { Grand Duchy of Luxemburg claims Deutsch-Wallonien
+	id = gerimperialism.11
+	title = gerimperialism.11.t
+	desc = gerimperialism.11.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = gerimperialism.11.a
+	hidden_effect = {
+	741 = { add_claim_by = LUX }
+	country_event = gerimperialism.12 # Bundesrat decides
+	}
+	custom_effect_tooltip = gerimperialism.11.ta
+	}
+}
+
+country_event = { # Bundestag ratifies the decision
+	id = gerimperialism.12
+	title = gerimperialism.12.t
+	desc = gerimperialism.12.d
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = { days = 2 }
+
+	option = {
+	name = gerimperialism.12.a
+	hidden_effect = {
+	741 = { add_claim_by = GER }
+	set_country_flag = GER_741_claims_done # for further decisions
+	}
+	custom_effect_tooltip = gerimperialism.12.ta
+	}
+}

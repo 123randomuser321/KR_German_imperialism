@@ -160,6 +160,64 @@ german_industrial_rec = {
 }
 
 
+### specific German subjects (sorted by tag)
+
+### BEL
+
+german_BEL = { decisions for GER
+	
+	fate_of_german_wallonia = { # what do, after WK2
+
+	available = {
+	owns_state = 741 # German Wallonia
+	NOT = { has_war = yes } # do not do territorial transfers amidst war
+	has_global_flag = war_is_hell # is set by the Second Weltkrieg news event
+	}
+
+	fire_only_once = yes
+
+	complete_effect = {
+	country_event = gerimperialism.9
+	}
+	}
+
+	prep_integration_741 = { prepare integration
+	available = = {
+	owns_state = 741
+	has_country_flag = GER_kept_741 # set by gerimperialism.9
+	}
+
+	fire_only_once = yes
+
+	days_remove = 7 # a week
+
+	modifier = {
+	political_power_gain = -0.5
+	}
+
+	remove_effect = {
+	set_country_flag = GER_741_started
+	}
+	}
+
+	luxemburg_claims_741 = {
+
+	available = {
+	owns_state = 741
+	has_country_flag = GER_741_started
+	}
+
+	cost = 10
+
+	fire_only_once = yes
+
+	complete_effect = {
+	country_event = gerimperialism.11
+	}
+	}
+}
+
+
 ### german_subject_cat
 
 german_subject_cat = {
