@@ -1,7 +1,9 @@
 ### Decision categories for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev2
-### added subcategories for subjects
+### v1 rev3
+### formatting
+### modified german_industrial_rec to reduce clutter in decisions
+
 
 ### General German imperialism
 ### Is used to unlock stuff for subcategories
@@ -35,6 +37,11 @@ german_industrial_rec = {
 	tag = GER
 	has_country_flag = GER_industrial_rec_plan
 	has_country_flag = GER_black_monday_wow # you are basically paralyzed until Black Week is over
+	OR = {
+	has_idea = GER_black_monday # put this here so that I don't clutter my decisions with this
+	has_idea = GER_black_monday1
+	has_idea = GER_black_monday2
+	}
 	}
 }
 

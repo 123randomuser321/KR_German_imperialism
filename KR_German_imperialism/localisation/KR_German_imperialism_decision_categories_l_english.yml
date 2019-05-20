@@ -1,7 +1,8 @@
 ﻿### loc for decision categories of 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev2
-### added loc for subject categories
+### v1 rev3
+### fixed a typo
+### flavored-up some text
 
 l_english:
 
@@ -18,8 +19,8 @@ german_PgmU_desc:0 "The 'Programm für gegenseitige militärische Unterstützung
 
 
 ### German temporary recovery from Black Monday
-german_industrial_rec:0 "Rescuing our Industry"
-german_industrial_rec_desc:0 "Following the decision to enact emergency recovery measures in an attempt to weaken the effects of the Black Week, we now need to mobolize our political capital."
+german_industrial_rec:0 "Kommission für wirtschaftliche Rehabilitierung"
+german_industrial_rec_desc:0 "Following the decision to enact emergency recovery measures in an attempt to weaken the effects of the Black Week, the newly established 'Commission for Industrial Recovery Measures' needs to get to work."
 ### German temp recovery end
 
 

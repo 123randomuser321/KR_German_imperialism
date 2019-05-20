@@ -1,7 +1,10 @@
 ### Events for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
 ### v1 rev3
-### added some stuff for GER and BEL (mostly German Wallonia)
+### reworked industrial recovery
+### modified BEL event ids
+### formatting
+
 
 ### all numbers are subject to change
 
@@ -167,9 +170,9 @@ country_event = {
 
 ### German industrial recovery events
 
-### most industrialized subjects get screwed over, notification
+### event for targets of German probes
 
-country_event = {
+country_event = { # get probed
 	id = gerimperialism.7
 	title = gerimperialism.7.t
 	desc = gerimperialism.7.d
@@ -177,13 +180,12 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-	name = gerimperialism.7.a # begrudgingly accept
+	name = gerimperialism.7.a
+	custom_effect_tooltip = gerimperialism.7.ta
 	}
 }
 
-### exploitation stops
-
-country_event = {
+country_event = { # sub gets extorted
 	id = gerimperialism.8
 	title = gerimperialism.8.t
 	desc = gerimperialism.8.d
@@ -191,7 +193,25 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-	name = gerimperialism.8.a # things go back to normal
+	name = gerimperialism.8.a
+	add_political_power = -50 # ouch
+	add_stability = -0.05 # more ouch
+	hidden_effect = {
+	set_country_flag = GER_exploited_us
+	}
+	}
+}
+
+country_event = { # extortion ends
+	id = gerimperialism.9
+	title = gerimperialism.9.t
+	desc = gerimperialism.9.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = gerimperialism.9.a
+	add_political_power = -10
 	}
 }
 
@@ -203,77 +223,98 @@ country_event = {
 ### GER and BEL
 
 country_event = { # The Fate of German Wallonia
-	id = gerimperialism.9 # I may move this later
-	title = gerimperialism.9.t
-	desc = gerimperialism.9.d
+	id = gerimperialism.300 # I may move this later
+	title = gerimperialism.300.t
+	desc = gerimperialism.300.d
 
 	is_triggered_only = yes
 
 	option = {
-	name = gerimperialism.9.a # Do Adalbert a favor and return German Wallonia
+	name = gerimperialism.300.a # Do Adalbert a favor and return German Wallonia
 	add_political_power = -50 # it does hurt
 	hidden_effect = {
 	BEL = { transfer_state = 741 } # BEL gets German Wallonia
 	### add some decisions for BEL regarding Walloon seperatism and such things
 	}
-	custom_effect_tooltip = gerimperialism.9.ta
+	custom_effect_tooltip = gerimperialism.300.ta
 	}
 
 	option = {
-	name = gerimperialism.9.b # keep the province and its industry
-	add_political_power = -100 # ouch
-	BEL = { country_event = gerimperialism.10 }
+	name = gerimperialism.300.b # keep the province and its industry
+	add_political_power = 50 # Govt happy
+	BEL = { country_event = gerimperialism.301 }
 	hidden_effect = { set_country_flag = GER_kept_741 }
-	custom_effect_tooltip = gerimperialism.9.tb
+	custom_effect_tooltip = gerimperialism.300.tb
 	}
 }
 
 country_event = { # Adalbert loses the territory, final edition
-	id = gerimperialism.10
-	title = gerimperialism.10.t
-	desc = gerimperialism.10.d
+	id = gerimperialism.301
+	title = gerimperialism.301.t
+	desc = gerimperialism.301.d
 
 	is_triggered_only = yes
 
 	option = {
-	name = gerimperialism.10.a # begrudgingly concede
+	name = gerimperialism.301.a # begrudgingly concede
 	add_political_power = -100
 	### maybe add an option for counteraction later (e.g. if Adalbert implemented reforms)
 	}
 }
 
 country_event = { Grand Duchy of Luxemburg claims Deutsch-Wallonien
-	id = gerimperialism.11
-	title = gerimperialism.11.t
-	desc = gerimperialism.11.d
+	id = gerimperialism.302
+	title = gerimperialism.302.t
+	desc = gerimperialism.302.d
 
 	is_triggered_only = yes
 
 	option = {
-	name = gerimperialism.11.a
+	name = gerimperialism.302.a
 	hidden_effect = {
 	741 = { add_claim_by = LUX }
-	country_event = gerimperialism.12 # Bundesrat decides
+	country_event = gerimperialism.303 # Bundesrat decides
 	}
-	custom_effect_tooltip = gerimperialism.11.ta
+	custom_effect_tooltip = gerimperialism.302.ta
 	}
 }
 
-country_event = { # Bundestag ratifies the decision
-	id = gerimperialism.12
-	title = gerimperialism.12.t
-	desc = gerimperialism.12.d
+country_event = { # Bundestag recognizes Charlotte's claim
+	id = gerimperialism.303
+	title = gerimperialism.303.t
+	desc = gerimperialism.303.d
 
 	is_triggered_only = yes
 
 	mean_time_to_happen = { days = 2 }
 
 	option = {
-	name = gerimperialism.12.a
+	name = gerimperialism.303.a
 	hidden_effect = {
 	741 = { add_claim_by = GER }
 	set_country_flag = GER_741_claims_done # for further decisions
 	}
-	custom_effect_tooltip = gerimperialism.12.ta
+	custom_effect_tooltip = gerimperialism.303.ta
+	}
+}
+
+country_event = { # fires when GER has almost fully integrated 741
+	id = gerimperialism.X
+	title = gerimperialism.X.t
+	desc = gerimperialism.X.d
+
+	trigger = {
+	tag = GER
+	has_country_flag = {
+	flag = 741_integration_level
+	value = 10 # arbitrary
+	}
+	}
+
+	fire_only_once = yes
+
+	option = {
+	name = gerimperialism.X.a
+	hidden_effect = { set_country_flag = GER_741_final_integration }
 	}
 }

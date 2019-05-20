@@ -1,10 +1,11 @@
 ### Decisions for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev2
-### removed initial german_imperialism decisions
-### added requests for subjects (inf; support; normal, anti-air and anti-tank artillery)
-### for now, only for non-AI
-### started implementing industrial recovery
+### v1 rev3
+### modified industrial recovery intro
+### excluded PgmU for now
+### simplified industrial exploitation alot (thank you, targeted decisions)
+### modified and expanded German Wallonia issue
+### WALLONIA ISSUE ONLY WORKS IF YOU ALLOW MAJOR NEWS EVENTS ###
 
 ### the equipment ratios are subject to change
 
@@ -12,23 +13,23 @@
 
 german_imperialism = {
 	
-	GER_establish_military_assistance = { # unlocks decisions for military support re subjects
-	
-	visible = {
-	has_equipment = {
-	infantry_equipment_0 > 1000
-	}
-	}
-	
-	cost = 100 # subject to change
-
-	fire_only_once = yes
-	days_remove = 28 # arbitrary number, may change
-
-	remove_effect = {
-	set_global_flag = GER_military_aid_program # note to self: GEA, MAF and AOG should not be eligible, since they are technically part of the German state/economy, so they will be handled in another way
-	}
-	}
+#	GER_establish_military_assistance = { # unlocks decisions for military support re subjects
+#	
+#	visible = {
+#	has_equipment = {
+#	infantry_equipment_0 > 1000
+#	}
+#	}
+#	
+#	cost = 100 # subject to change
+#
+#	fire_only_once = yes
+#	days_remove = 28 # arbitrary number, may change
+#
+#	remove_effect = {
+#	set_global_flag = GER_military_aid_program # note to self: GEA, MAF and AOG should not be eligible, since they are technically part of the German state/economy, so they will be handled in another way
+#	}
+#	}
 
 
 	GER_hijack_industrial_recovery = {
@@ -46,7 +47,9 @@ german_imperialism = {
 
 	fire_only_once = yes
 
-	complete_effect = {
+	days_remove = 4 # If Sarazzin can work out an economic union in four days we can too
+
+	remove_effect = {
 	set_country_flag = GER_industrial_rec_plan
 	}
 	}
@@ -95,69 +98,88 @@ german_industrial_rec = {
 	}
 	}
 
-	ger_exploit_strong_subjects = {
 
-	available = {
-	has_political_power > 50 # no abusing this
-	any_country = {
-	limit = {
-	is_subject_of = GER
-	NOT = { has_country_flag = GER_strong_exploitation_finished }
-	}
-	ic_ratio = {
-	tag = GER # check against Germany
-	ratio = 0.25 # subject to testing, 25%
-	}
-	}
-	}
+	ger_analyze_sub_economy = {
 
-	days_re_enable = 3
+	fire_only_once = yes
 
-	days_remove = 14 # 2 weeks
-
-	modifier = {
+	target_trigger = {
+	FROM = {
 	every_country = {
 	limit = {
 	is_subject_of = GER
-	has_country_flag = strongly_exploited_by_GER
+	NOT = {
+	tag = MAF # these are all
+	tag = GEA # technically part of
+	tag = AOG # the German state
 	}
-	consumer_goods_factor = 0.1
-	production_factory_max_efficiency_factor = -0.1 # these comparisons are hard to make
 	}
-	GER = {
-	consumer_goods_factor = -0.05
-	production_factory_max_efficiency_factor = 0.05
+	}
 	}
 	}
 
-	cost = 50
+	cost = 5
+
+	modifier = {
+	political_power_gain = -0.25 # prone to change
+	}
+
+	days_remove = 7
 
 	complete_effect = {
-	random_country = {
-	limit = {
-	is_subject_of = GER
-	ic_ratio = {
-	tag = GER # see above
-	ratio = 0.25
-	}
-	}
-	set_country_flag = strongly_exploited_by_GER
-	country_event = gerimperialism.7
+	FROM = { 
+	country_event = gerimperialism.7 # probed tag gets a notification
+	set_country_flag = GER_analyzed_economy # for later
 	}
 	}
 
 	remove_effect = {
+	FROM = { set_country_flag = GER_analyzed_economy_finished }
+	}
+	}
+
+	ger_exploit_sub_civ_economy = {
+
+	fire_only_once = yes
+
+	target_trigger = {
+	FROM = {
 	every_country = {
 	limit = {
-	has_country_flag = strongly_exploited_by_GER
-	NOT = { has_country_flag = GER_strong_exploitation_finished }
+	is_subject_of = GER
+	NOT = {
+	tag = MAF
+	tag = GEA
+	tag = AOG
 	}
-	set_country_flag = GER_strong_exploitation_finished
-	country_event = gerimperialism.8 # Notification regarding normalcy
+	has_country_flag = GER_analyzed_economy_finished
 	}
+	}
+	}
+	}
+
+	days_remove = 7
+
+	modifier = {
+	FROM = {
+	consumer_goods_factor = 0.15 # may use something else later
+	stability_weekly_factor = -0.005
+	}
+	consumer_goods_factor = -0.05 # I have no exact ratio, though GER has more industrial power than most subjects
+	political_power_gain = -0.05
+	}
+
+	complete_effect = {
+	FROM = { country_event = gerimperialism.8 } # initial outrage
+	}
+
+	remove_effect = {
+	FROM = { country_event = gerimperialism.9 } # further outrage
 	}
 	}
 }
+
+### industrial recovery end
 
 
 ### specific German subjects (sorted by tag)
@@ -171,20 +193,21 @@ german_BEL = { decisions for GER
 	available = {
 	owns_state = 741 # German Wallonia
 	NOT = { has_war = yes } # do not do territorial transfers amidst war
-	has_global_flag = war_is_hell # is set by the Second Weltkrieg news event
+	has_global_flag = war_is_hell # is set by the Second Weltkrieg news event I have yet to find something better
 	}
 
 	fire_only_once = yes
 
 	complete_effect = {
-	country_event = gerimperialism.9
+	country_event = gerimperialism.300
 	}
 	}
 
-	prep_integration_741 = { prepare integration
+
+	prep_integration_741 = { # prepare integration
 	available = = {
 	owns_state = 741
-	has_country_flag = GER_kept_741 # set by gerimperialism.9
+	has_country_flag = GER_kept_741 # set by gerimperialism.300
 	}
 
 	fire_only_once = yes
@@ -192,7 +215,7 @@ german_BEL = { decisions for GER
 	days_remove = 7 # a week
 
 	modifier = {
-	political_power_gain = -0.5
+	political_power_gain = -0.25
 	}
 
 	remove_effect = {
@@ -200,7 +223,8 @@ german_BEL = { decisions for GER
 	}
 	}
 
-	luxemburg_claims_741 = {
+
+	luxemburg_claims_741 = { # Charlotte wants it
 
 	available = {
 	owns_state = 741
@@ -212,9 +236,57 @@ german_BEL = { decisions for GER
 	fire_only_once = yes
 
 	complete_effect = {
-	country_event = gerimperialism.11
+	country_event = gerimperialism.302 # Luxemburg claim event
 	}
 	}
+
+
+	luxemburg_elite_741 = { # nobles and businessmen from Luxemburg are granted land et al
+
+	available = {
+	owns_state = 741
+	has_country_flag = GER_741_claims_done # from gerimperialism.303
+	}
+
+	cost = 10
+
+	fire_only_once = yes
+
+	remove_effect = {
+	set_country_flag = 741_LUX_elite_settled
+	}
+
+	days_remove = 56 # 8 weeks
+
+	modifier = {
+	political_power_gain = -0.05
+	}
+	}
+
+
+	german_elite_741 = { # German nobles move in (companies are already there)
+
+	available = {
+	owns_state = 741
+	has_country_flag = GER_741_claims_done # from gerimperialism.303
+	}
+
+	cost = 10
+
+	fire_only_once = yes
+
+	remove_effect = {
+	set_country_flag = 741_GER_elite_settled
+	}
+
+	days_remove = 84 # 12 weeks, longer since you are the oppressor
+
+	modifier = {
+	political_power_gain = -0.5
+	}
+	}
+
+	### add a visible but unavailable decision for final integration here
 }
 
 

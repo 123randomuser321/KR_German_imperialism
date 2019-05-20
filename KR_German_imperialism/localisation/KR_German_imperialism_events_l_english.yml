@@ -1,7 +1,11 @@
 ﻿### loc for events of 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
 ### v1 rev3
-### added some loc for BEL
+### replaced BEL numbers
+### removed initial German recovery stuff
+### added new German recovery stuff
+### new German Wallonia stuff
+### typo
 
 l_english:
 
@@ -52,15 +56,21 @@ gerimperialism.6.a:0 "That is indeed a shame."
 
 ### industrial recovery events
 
-### strong industries get scammed
-gerimperialism.7.t:0 "German authorities seize industrial assets!"
-gerimperialism.7.d:0 "Citing missing debt payments and moral obligations, officials from various German entities, including companies such as Krupp and the Foreign ministry have announced the 'temporary takeover' of a good sum of factories and industrial equipment."
-gerimperialism.7.a:0 "Outrageous!"
+### subject gets probed
+gerimperialism.7.t:0 "German analysts arrive in [ROOT.Capital.GetName]"
+gerimperialism.7.d:0 "Without so much as a warning, German analysts and economists arrived at the central station in [ROOT.Capital.GetName] this morning.\n\nThe claim to have been asked to \"assess the economic situation in [ROOT.GetNameDef]\", though they did not provide a clear reason for their task."
+gerimperialism.7.a:0 "For better or worse, let them do their job."
+gerimperialism.7.ta:0 "The Germans will conduct their operation, giving them a clear insight into our economy's inner workings."
 
-### exploitation stops
-gerimperialism.8.t:0 "Return of seized assets"
-gerimperialism.8.d:0 "German officials have officially returned the promptly seized assets and told us, that our debt returned to 'normal'.\n\nWhile some believe, that they just want to save face, we cannot openly proclaim such things."
-gerimperialism.8.a:0 "As if we weren't struggling with our own problems."
+### subject is exploited
+gerimperialism.8.t:0 "Bad news from [ROOT.Capital.GetName]!"
+gerimperialism.8.d:0 "In the early morning hours, delegations of the seemingly innocent team of German analysts entered offices of key industrial companies in [ROOT.Capital.GetName] with orders from [GER.Capital.GetName] to collect due debts.\nAs most of the victims were unable to appropriately pay them, the German forced them to pay in material goods, circumventing our political bodies.\n\nAs it stands now, we are forced to watch."
+gerimperialism.8.a:0 "What are they thinking?!"
+
+### extortion ends
+gerimperialism.9.t:0 "Analysts leave"
+gerimperialism.9.d:0 "The German analysts have finally left.\nWe may return to business now."
+gerimperialism.9.a:0 "Took them long enough."
 
 ### industrial recovery end
 
@@ -70,26 +80,26 @@ gerimperialism.8.a:0 "As if we weren't struggling with our own problems."
 ### BEL
 
 ### Fate of German Wallonia
-gerimperialism.9.t:0 "The Fate of German Wallonia"
-gerimperialism.9.d:0 "The Second Weltkrieg is over. And with it, our official reason for administering the Walloon industry is invalid.\nWhile it might be painful, we must finally decide what to do with this tract of land.\n\nDo we keep and integrate it, or do we return it to [BEL.GetName]?"
-gerimperialism.9.a:0 "We have no need for this. Return the territory."
-gerimperialism.9.ta:0 "This might ease tensions in the West."
-gerimperialism.9.b:0 "Keep it and turn it into something German!"
-gerimperialism.9.tb:0 "If you play your cards right, you will gain a core."
+gerimperialism.300.t:0 "The Fate of German Wallonia"
+gerimperialism.300.d:0 "The Second Weltkrieg is over. And with it, our official reason for administering the Walloon industry is invalid.\nWhile it might be painful, we must finally decide what to do with this tract of land.\n\nDo we keep and integrate it, or do we return it to [BEL.GetName]?"
+gerimperialism.300.a:0 "We have no need for this. Return the territory."
+gerimperialism.300.ta:0 "This might ease tensions in the West."
+gerimperialism.300.b:0 "Keep it and turn it into something German!"
+gerimperialism.300.tb:0 "If you play your cards right, you will gain a core."
 
 ### territory slips through Adalbert's hands
-gerimperialism.10.t:0 "Message from [GER.Capital.GetName]"
-gerimperialism.10.d:0 "The German government has just told us, that [GER.GetNameDef] does not intend to return the Walloon industrial area."
-gerimperialism.10.a:0 "We didn't need this to happen..."
+gerimperialism.301.t:0 "Message from [GER.Capital.GetName]"
+gerimperialism.301.d:0 "The German government has just told us, that [GER.GetNameDef] does not intend to return the Walloon industrial area."
+gerimperialism.301.a:0 "We didn't need this to happen..."
 
 ### Charlotte claims German Wallonia
-gerimperialism.11.t:0 "Luxemburg claims German Wallonia"
-gerimperialism.11.d:0 "The Grand Duchy of Luxemburg, part of [GER.GetNameDef] ever since the end of Weltkrieg, has, as of this afternoon, officially laid clame to the German-administered regions of Wallonia.\n\nWith this done, the Bundestag may decide further actions."
-gerimperialism.11.a:0 "Charlotte is doing a great job!"
-gerimperialism.11.ta:0 "German Wallonia will gain a claim by Luxemburg, with the Bundestag deciding on further territorial actions."
+gerimperialism.302.t:0 "Luxemburg claims German Wallonia"
+gerimperialism.302.d:0 "The Grand Duchy of Luxemburg, part of [GER.GetNameDef] ever since the end of Weltkrieg, has, as of this afternoon, officially laid clame to the German-administered regions of Wallonia.\n\nWith this done, the Bundestag may decide further actions."
+gerimperialism.302.a:0 "Charlotte is doing a great job!"
+gerimperialism.302.ta:0 "German Wallonia will gain a claim by Luxemburg, with the Bundestag deciding on further territorial actions."
 
 ### Bundestag ratifies Charlotte's claim
-gerimperialism.12.t:0 "Bundestag ratifies Luxemburg's claim"
-gerimperialism.12.d:0 "The Bundestag has officially recognized the claim of the Grand Duchy of Luxemburg to the German-administered Walloon territories, thus making it an official claim exercised through Germany itself.\n\nWe may now proceed to further integrate said territories."
-gerimperialism.12.a:0 "As expected."
-gerimperialism.12.ta:0 "Germany now officially claim German Wallonia, and can use Luxemburg's claim as a justification."
+gerimperialism.303.t:0 "Bundestag ratifies Luxemburg's claim"
+gerimperialism.303.d:0 "The Bundestag has officially recognized the claim of the Grand Duchy of Luxemburg to the German-administered Walloon territories, thus making it an official claim exercised through Germany itself.\n\nWe may now proceed to further integrate said territories."
+gerimperialism.303.a:0 "As expected."
+gerimperialism.303.ta:0 "Germany now officially claims German Wallonia, and can use Luxemburg's claim as a justification."
