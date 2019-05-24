@@ -1,9 +1,7 @@
 ### Decision categories for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev3
-### formatting
-### modified german_industrial_rec to reduce clutter in decisions
-
+### v1 rev4
+### just some tweaks
 
 ### General German imperialism
 ### Is used to unlock stuff for subcategories
@@ -23,7 +21,7 @@ german_imperialism = {
 german_PgmU = {
 	available = {
 	tag = GER
-	has_global_flag = GER_military_aid_program
+	has_country_flag = GER_military_aid_program
 	}
 } 
 

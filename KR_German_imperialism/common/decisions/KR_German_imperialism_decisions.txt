@@ -2,6 +2,8 @@
 ### by MEEEB
 ### v1 rev4
 ### Wallonia issue v1 implemented, you can core it now
+### hidden_effect used in many things
+### added checks against the state of Luxemburg (8)
 ### WALLONIA ISSUE ONLY WORKS IF YOU ALLOW MAJOR NEWS EVENTS ###
 
 
@@ -25,7 +27,7 @@ german_imperialism = {
 #	days_remove = 28 # arbitrary number, may change
 #
 #	remove_effect = {
-#	set_global_flag = GER_military_aid_program # note to self: GEA, MAF and AOG should not be eligible, since they are technically part of the German state/economy, so they will be handled in another way
+#	set_country_flag = GER_military_aid_program # note to self: GEA, MAF and AOG should not be eligible, since they are technically part of the German state/economy, so they will be handled in another way
 #	}
 #	}
 
@@ -48,7 +50,7 @@ german_imperialism = {
 	days_remove = 4 # If Sarazzin can work out an economic union in four days we can too
 
 	remove_effect = {
-	set_country_flag = GER_industrial_rec_plan
+	hidden_effect = { set_country_flag = GER_industrial_rec_plan }
 	}
 	}
 
@@ -85,14 +87,15 @@ german_industrial_rec = {
 
 	fire_only_once = yes
 
-	days_remove = 28 # 4 weeks
+	days_remove = 3
 
 	modifier = {
-	stability_weekly_factor = 0.01 # needs testing
+	political_power_gain = -0.05
 	}
 
 	remove_effect = {
-	add_political_power = 20
+	add_political_power = 50
+	add_stability = 0.05
 	}
 	}
 
@@ -119,7 +122,7 @@ german_industrial_rec = {
 	cost = 5
 
 	modifier = {
-	political_power_gain = -0.25 # prone to change
+	political_power_gain = -0.01 # prone to change
 	}
 
 	days_remove = 7
@@ -127,18 +130,22 @@ german_industrial_rec = {
 	complete_effect = {
 	FROM = { 
 	country_event = gerimperialism.7 # probed tag gets a notification
-	set_country_flag = GER_analyzed_economy # for later
+	hidden_effect = { set_country_flag = GER_analyzed_economy } # for later
 	}
 	}
 
 	remove_effect = {
-	FROM = { set_country_flag = GER_analyzed_economy_finished }
+	FROM = { hidden_effect = { set_country_flag = GER_analyzed_economy_finished } }
 	}
 	}
 
 	ger_exploit_sub_civ_economy = {
 
 	fire_only_once = yes
+
+	available = {
+	NOT = { has_country_flag = GER_currently_exploiting }
+	}
 
 	target_trigger = {
 	FROM = {
@@ -156,7 +163,7 @@ german_industrial_rec = {
 	}
 	}
 
-	days_remove = 7
+	days_remove = 14
 
 	modifier = {
 	FROM = {
@@ -169,10 +176,12 @@ german_industrial_rec = {
 
 	complete_effect = {
 	FROM = { country_event = gerimperialism.8 } # initial outrage
+	hidden_effect = { set_country_flag = GER_currently_exploiting } # do not overuse the decision
 	}
 
 	remove_effect = {
 	FROM = { country_event = gerimperialism.9 } # further outrage
+	hidden_effect = { clr_country_flag = GER_currently_exploiting }
 	}
 	}
 }
@@ -190,6 +199,7 @@ german_BEL = { decisions for GER
 
 	available = {
 	owns_state = 741 # German Wallonia
+	owns_state = 8 # Luxemburg
 	NOT = { has_war = yes } # do not do territorial transfers amidst war
 	has_global_flag = war_is_hell # is set by the Second Weltkrieg news event, I have yet to find something better
 	}
@@ -205,6 +215,7 @@ german_BEL = { decisions for GER
 	prep_integration_741 = { # prepare integration
 	available = = {
 	owns_state = 741
+	owns_state = 8
 	has_country_flag = GER_kept_741 # set by gerimperialism.300
 	}
 
@@ -217,10 +228,12 @@ german_BEL = { decisions for GER
 	}
 
 	remove_effect = {
+	hidden_effect = {
 	set_country_flag = GER_741_started
 	set_country_flag = {
 	flag = GER_741_integration # fill this and core it
 	value = 0
+	}
 	}
 	}
 	}
@@ -230,6 +243,7 @@ german_BEL = { decisions for GER
 
 	available = {
 	owns_state = 741
+	owns_state = 8
 	has_country_flag = GER_741_started
 	}
 
@@ -247,6 +261,7 @@ german_BEL = { decisions for GER
 
 	available = {
 	owns_state = 741
+	owns_state = 8
 	has_country_flag = GER_741_claims_done # from gerimperialism.303
 	}
 
@@ -255,10 +270,12 @@ german_BEL = { decisions for GER
 	fire_only_once = yes
 
 	remove_effect = {
+	hidden_effect = {
 	set_country_flag = 741_LUX_elite_settled
 	modify_country_flag = {
 	flag = GER_741_integration
 	value = 2
+	}
 	}
 	}
 
@@ -274,6 +291,7 @@ german_BEL = { decisions for GER
 
 	available = {
 	owns_state = 741
+	owns_state = 8
 	has_country_flag = GER_741_claims_done # from gerimperialism.303
 	}
 
@@ -282,10 +300,12 @@ german_BEL = { decisions for GER
 	fire_only_once = yes
 
 	remove_effect = {
+	hidden_effect = {
 	set_country_flag = 741_GER_elite_settled
 	modify_country_flag = {
 	flag = GER_741_integration
 	value = 1
+	}
 	}
 	}
 
@@ -301,6 +321,7 @@ german_BEL = { decisions for GER
 
 	available = {
 	owns_state = 741
+	owns_state = 8
 	has_country_flag = 741_GER_elite_settled
 	}
 
@@ -313,7 +334,7 @@ german_BEL = { decisions for GER
 	}
 
 	remove_effect = {
-	set_country_flag = public_schools_741_partial_german
+	hidden_effect = { set_country_flag = public_schools_741_partial_german }
 	}
 
 	days_remove = 250 # arbitrary
@@ -328,6 +349,7 @@ german_BEL = { decisions for GER
 
 	available = {
 	owns_state = 741
+	owns_state = 8
 	has_country_flag = public_schools_741_partial_german # set by gerimperialism.304
 	has_country_flag = {
 	flag = GER_741_integration
@@ -344,9 +366,11 @@ german_BEL = { decisions for GER
 	}
 
 	remove_effect = {
+	hidden_effect = {
 	modify_country_flag = {
 	flag = GER_741_integration
 	value = 3
+	}
 	}
 	country_event = gerimperialism.306
 	}
@@ -359,6 +383,7 @@ german_BEL = { decisions for GER
 
 	available = {
 	owns_state = 741
+	owns_state = 8
 	has_country_flag = 741_GER_elite_settled
 	has_country_flag = 741_LUX_elite_settled
 	}
@@ -372,18 +397,20 @@ german_BEL = { decisions for GER
 	}
 
 	remove_effect = {
+	hidden_effect = {
 	modify_country_flag = {
 	flag = GER_741_integration
 	value = 3
 	}
+	}
 	country_event = gerimperialism.308 # increased Germanisation
+	741 = { add_manpower = 500 } # more or less symbolic
 	}
 
 	days_remove = 365 # yes, that's a year
 
 	modifier = {
-	MONTHLY_POPULATION = -0.01 # test this
-	### reminder to add a pop bonus to 741 later
+	MONTHLY_POPULATION = -0.001 # test this
 	}
 	}
 
@@ -392,6 +419,7 @@ german_BEL = { decisions for GER
 
 	available = {
 	owns_state = 741
+	owns_state = 8
 	has_country_flag = 741_LUX_elite_settled
 	}
 
@@ -404,9 +432,11 @@ german_BEL = { decisions for GER
 	}
 
 	remove_effect = {
+	hidden_effect = {
 	modify_country_flag = {
 	flag = GER_741_integration
 	value = 1
+	}
 	}
 	country_event = gerimperialism.310 # LUX admins settled
 	}
@@ -419,6 +449,7 @@ german_BEL = { decisions for GER
 
 	available = {
 	owns_state = 741
+	owns_state = 8
 	has_country_flag = GER_741_final_integration
 	}
 
@@ -441,6 +472,8 @@ german_BEL = { decisions for GER
 	remove_core_BEL_741 = { # remove BEL's core
 
 	available = {
+	owns_state = 741
+	owns_state = 8
 	has_country_flag = BEL_741_timeout
 	}
 
@@ -462,7 +495,6 @@ german_BEL = { decisions for GER
 	}
 
 	### todo: add something like additional investment (aka industrialization or something)
-	### hidden_effect
 }
 
 

@@ -292,7 +292,7 @@ country_event = { # Bundestag recognizes Charlotte's claim
 	option = {
 	name = gerimperialism.303.a
 	hidden_effect = {
-	741 = { add_claim_by = GER }
+	#741 = { add_claim_by = GER } # state file already adds a claim
 	set_country_flag = GER_741_claims_done # for further decisions
 	}
 	custom_effect_tooltip = gerimperialism.303.ta
@@ -404,6 +404,7 @@ country_event = { # random industrial investments during integration of German W
 	tag = GER
 	has_country_flag = GER_741_integration
 	owns_state = 741
+	owns_state = 8
 	}
 
 	mean_time_to_happen = {

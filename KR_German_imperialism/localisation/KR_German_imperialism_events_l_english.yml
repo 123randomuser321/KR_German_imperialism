@@ -136,3 +136,27 @@ gerimperialism.310.t:0 "Partial transfer complete"
 gerimperialism.310.d:0 "The intended transfer of authority has been completed, with no events of note complicating the process."
 gerimperialism.310.a:0 "One less problem to worry about."
 
+### random industrial investments into 741
+gerimperialism.311.t:0 "German Industrialists invest into German Wallonia"
+gerimperialism.311.d:0 "It seems as though stating our intent to integrate our Walloon territories has led to an increase in investments into said area.\n\nToday, Krupp and other companies have opened a multitude of new factories."
+gerimperialism.311.a:0 "Always helpful, they are."
+
+### event to allow coring of 741
+gerimperialism.312.t:0 "The State of affairs in German Wallonia"
+gerimperialism.312.d:0 "Our efforts in aligning and integrating the Walloon territories are a success.\n\nGerman is taking root in all corners of the territory, the Grand Duchy successfully administeres its tracts of land and the population has been pacified.\n\nIt is time for the final step."
+gerimperialism.312.a:0 "Let us finally put this issue to rest!"
+
+### some flavor for final integration
+gerimperialism.313.t:0 "Final integration begins."
+gerimperialism.313.d:0 "The coming month will certainly be stressful, as there is still alot to do before we our goal is achieved.\n\nWhile we do have experience in organizing ceremonies, it will still take some time to actually plan one.\nAdditionally, we will still need to transfer full authority over the Walloon territories to the Grand Duchy of Luxemburg, including, but not limited to positioning garrisons, handing over economic control and staffing the administration with Luxemburgian officials.\n\nWe will, however, maintain a presence."
+gerimperialism.313.a:0 "Let us get to work."
+
+### finally get the core on 741 ### todo: beef this up a bit
+gerimperialism.314.t:0 "The Grand Duchy proclaims Groß Luxemburg!"
+gerimperialism.314.d:0 "\"The European territories of the former Kingdom of Belgium still administered by [GER.GetNameDef] shall be incorporated into the Grand Duchy of Luxemburg, with administrative control transferred accordingly.\nThese territories, formerly known as German Wallonia, shall henceforth be called Groß Luxemburg.\"\n - Excerpt from the Statute of Integration, signed by Duchess Charlotte of Luxemburg and [GER.GetLeader]\n\n\nThe ink on the document had not yet dried when authority was transferred to the Grand Duchy, as a German garrison symbolically shook hands with a counterpart from Luxemburg.\nThe event was a complete success."
+gerimperialism.314.a:0 "Groß Luxemburg it is!"
+
+### BEL loses core on 741
+gerimperialism.315.t:0 "German Wallonia gone"
+gerimperialism.315.d:0 "While technically not under our control for a long time, over the past months all signs of Walloon separatism in German-administered Wallonia have vanished.\nSad as it may be, it is lost."
+gerimperialism.315.a:0 "A sadness overcomes me..."
