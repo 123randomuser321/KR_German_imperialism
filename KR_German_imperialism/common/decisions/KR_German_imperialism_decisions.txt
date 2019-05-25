@@ -1,9 +1,10 @@
 ### Decisions for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev4
-### Wallonia issue v1 implemented, you can core it now
-### hidden_effect used in many things
-### added checks against the state of Luxemburg (8)
+### v1 rev4.1
+### targeted decision broke
+### typos
+### available --> visible
+### fixed support equipment
 ### WALLONIA ISSUE ONLY WORKS IF YOU ALLOW MAJOR NEWS EVENTS ###
 
 
@@ -106,15 +107,11 @@ german_industrial_rec = {
 
 	target_trigger = {
 	FROM = {
-	every_country = {
-	limit = {
 	is_subject_of = GER
 	NOT = {
 	tag = MAF # these are all
 	tag = GEA # technically part of
 	tag = AOG # the German state
-	}
-	}
 	}
 	}
 	}
@@ -143,14 +140,12 @@ german_industrial_rec = {
 
 	fire_only_once = yes
 
-	available = {
+	visible = {
 	NOT = { has_country_flag = GER_currently_exploiting }
 	}
 
 	target_trigger = {
 	FROM = {
-	every_country = {
-	limit = {
 	is_subject_of = GER
 	NOT = {
 	tag = MAF
@@ -160,19 +155,8 @@ german_industrial_rec = {
 	has_country_flag = GER_analyzed_economy_finished
 	}
 	}
-	}
-	}
 
 	days_remove = 14
-
-	modifier = {
-	FROM = {
-	consumer_goods_factor = 0.15 # may use something else later
-	stability_weekly_factor = -0.005
-	}
-	consumer_goods_factor = -0.05 # I have no exact ratio, though GER has more industrial power than most subjects
-	political_power_gain = -0.05
-	}
 
 	complete_effect = {
 	FROM = { country_event = gerimperialism.8 } # initial outrage
@@ -193,11 +177,11 @@ german_industrial_rec = {
 
 ### BEL
 
-german_BEL = { decisions for GER
+german_BEL = { # decisions for GER
 	
 	fate_of_german_wallonia = { # what do, after WK2
 
-	available = {
+	visible = {
 	owns_state = 741 # German Wallonia
 	owns_state = 8 # Luxemburg
 	NOT = { has_war = yes } # do not do territorial transfers amidst war
@@ -213,7 +197,7 @@ german_BEL = { decisions for GER
 
 
 	prep_integration_741 = { # prepare integration
-	available = = {
+	visible = {
 	owns_state = 741
 	owns_state = 8
 	has_country_flag = GER_kept_741 # set by gerimperialism.300
@@ -241,7 +225,7 @@ german_BEL = { decisions for GER
 
 	luxemburg_claims_741 = { # Charlotte wants it
 
-	available = {
+	visible = {
 	owns_state = 741
 	owns_state = 8
 	has_country_flag = GER_741_started
@@ -259,7 +243,7 @@ german_BEL = { decisions for GER
 
 	luxemburg_elite_741 = { # nobles and businessmen from Luxemburg are granted land et al
 
-	available = {
+	visible = {
 	owns_state = 741
 	owns_state = 8
 	has_country_flag = GER_741_claims_done # from gerimperialism.303
@@ -271,7 +255,7 @@ german_BEL = { decisions for GER
 
 	remove_effect = {
 	hidden_effect = {
-	set_country_flag = 741_LUX_elite_settled
+	set_country_flag = LUX_741_elite_settled
 	modify_country_flag = {
 	flag = GER_741_integration
 	value = 2
@@ -289,7 +273,7 @@ german_BEL = { decisions for GER
 
 	german_elite_741 = { # German nobles move in (companies are already there)
 
-	available = {
+	visible = {
 	owns_state = 741
 	owns_state = 8
 	has_country_flag = GER_741_claims_done # from gerimperialism.303
@@ -301,7 +285,7 @@ german_BEL = { decisions for GER
 
 	remove_effect = {
 	hidden_effect = {
-	set_country_flag = 741_GER_elite_settled
+	set_country_flag = GER_741_elite_settled
 	modify_country_flag = {
 	flag = GER_741_integration
 	value = 1
@@ -319,10 +303,10 @@ german_BEL = { decisions for GER
 
 	public_schools_741_ger1 = { # Make German a secondary language in public schools
 
-	available = {
+	visible = {
 	owns_state = 741
 	owns_state = 8
-	has_country_flag = 741_GER_elite_settled
+	has_country_flag = GER_741_elite_settled
 	}
 
 	cost = 20
@@ -347,7 +331,7 @@ german_BEL = { decisions for GER
 
 	public_schools_741_ger2 = { # require most academic matters to be handled in German
 
-	available = {
+	visible = {
 	owns_state = 741
 	owns_state = 8
 	has_country_flag = public_schools_741_partial_german # set by gerimperialism.304
@@ -381,11 +365,11 @@ german_BEL = { decisions for GER
 
 	attract_settlers_741 = { # attract German and Luxemburgian settlers, i.e. workers
 
-	available = {
+	visible = {
 	owns_state = 741
 	owns_state = 8
-	has_country_flag = 741_GER_elite_settled
-	has_country_flag = 741_LUX_elite_settled
+	has_country_flag = GER_741_elite_settled
+	has_country_flag = LUX_741_elite_settled
 	}
 
 	cost = 50
@@ -417,10 +401,10 @@ german_BEL = { decisions for GER
 
 	partial_LUX_admin_741 = { # let Charlotte partially inherit the occuational admin
 
-	available = {
+	visible = {
 	owns_state = 741
 	owns_state = 8
-	has_country_flag = 741_LUX_elite_settled
+	has_country_flag = LUX_741_elite_settled
 	}
 
 	cost = 10
@@ -445,9 +429,9 @@ german_BEL = { decisions for GER
 	}
 
 
-	741_final_integration = {
+	final_integration_741 = {
 
-	available = {
+	visible = {
 	owns_state = 741
 	owns_state = 8
 	has_country_flag = GER_741_final_integration
@@ -471,7 +455,7 @@ german_BEL = { decisions for GER
 
 	remove_core_BEL_741 = { # remove BEL's core
 
-	available = {
+	visible = {
 	owns_state = 741
 	owns_state = 8
 	has_country_flag = BEL_741_timeout
@@ -504,7 +488,7 @@ german_subject_cat = {
 
 	request_infantry_equip_ger = { # Subject requests inf equipment from GER
 
-	available = {
+	visible = {
 	NOT = { is_ai = yes } # since I still have to figure out AI, all equipment requests are player-only, for now
 	has_equipment = {
 	infantry_equipment_0 < 500
@@ -524,13 +508,10 @@ german_subject_cat = {
 	request_support_equip_ger = { # Subject requests support equipment from GER
 
 	visible = {
-	has_tech = support_weapons
-	}
-
-	available = {
+	has_tech = tech_support
 	NOT = { is_ai = yes } # see above
 	has_equipment = {
-	support_weapons < 50
+	support_equipment_1 < 50
 	}
 	}
 
@@ -547,9 +528,6 @@ german_subject_cat = {
 
 	visible = {
 	has_tech = gw_artillery
-	}
-
-	available = {
 	NOT = { is_ai = yes } # see above
 	has_equipment = {
 	artillery_equipment_1 < 50
@@ -569,9 +547,6 @@ german_subject_cat = {
 
 	visible = {
 	has_tech = interwar_antitank
-	}
-
-	available = {
 	NOT = { is_ai = yes } # see above
 	has_equipment = {
 	anti_tank_equipment_1 < 50
@@ -591,9 +566,6 @@ german_subject_cat = {
 
 	visible = {
 	has_tech = interwar_antiair
-	}
-
-	available = {
 	NOT = { is_ai = yes } # see above
 	has_equipment = {
 	anti_air_equipment_1 < 50

@@ -1,14 +1,14 @@
 ### Decision categories for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev4
-### just some tweaks
+### v1 rev4.1
+### available --> visible
 
 ### General German imperialism
 ### Is used to unlock stuff for subcategories
 ### Is also used to do things that affect every subject and/or ally
 
 german_imperialism = {
-	available = {
+	visible = {
 	tag = GER
 	}
 }
@@ -19,7 +19,7 @@ german_imperialism = {
 ### PgmU - Programm für gegenseitige militärische Unterstützungsmaßnahmen
 
 german_PgmU = {
-	available = {
+	visible = {
 	tag = GER
 	has_country_flag = GER_military_aid_program
 	}
@@ -31,7 +31,7 @@ german_PgmU = {
 ### German temporary industrial recovery for Black Monday
 
 german_industrial_rec = {
-	available = {
+	visible = {
 	tag = GER
 	has_country_flag = GER_industrial_rec_plan
 	has_country_flag = GER_black_monday_wow # you are basically paralyzed until Black Week is over
@@ -56,7 +56,7 @@ german_industrial_rec = {
 ### German Imperialism in the Baltic Duchy (BAT)
 
 german_BAT = { # master
-	available = {
+	visible = {
 	tag = GER
 	BAT = {
 	is_subject_of = GER
@@ -65,7 +65,7 @@ german_BAT = { # master
 }
 
 german_BAT_subject = { # subject
-	available = {
+	visible = {
 	tag = BAT
 	is_subject_of = GER
 	}
@@ -74,7 +74,7 @@ german_BAT_subject = { # subject
 ### German Imperialism in Flanders-Wallonia (BEL)
 
 german_BEL = { # master
-	available = {
+	visible = {
 	tag = GER
 	BEL = {
 	is_subject_of = GER
@@ -83,7 +83,7 @@ german_BEL = { # master
 }
 
 german_BEL_subject = { # subject
-	available = {
+	visible = {
 	tag = BEL # might need to be more specific, since actual Belgium can also be a subject
 	is_subject_of = GER
 	}
@@ -92,7 +92,7 @@ german_BEL_subject = { # subject
 ### German Imperialism in Lithuania (LIT)
 
 german_LIT = { # master
-	available = {
+	visible = {
 	tag = GER
 	LIT = {
 	is_subject_of = GER
@@ -101,7 +101,7 @@ german_LIT = { # master
 }
 
 german_LIT_subject = { # subject
-	available = {
+	visible = {
 	tag = LIT
 	is_subject_of = GER
 	}
@@ -110,7 +110,7 @@ german_LIT_subject = { # subject
 ### German Imperialism in White Ruthenia (WHR)
 
 german_WHR = { # master
-	available = {
+	visible = {
 	tag = GER
 	WHR = {
 	is_subject_of = GER
@@ -119,7 +119,7 @@ german_WHR = { # master
 }
 
 german_WHR_subject = { # subject
-	available = {
+	visible = {
 	tag = WHR
 	is_subject_of = GER
 	}
@@ -130,7 +130,7 @@ german_WHR_subject = { # subject
 ### German Imperialism in Mittelafrika
 
 german_MAF = { # master
-	available = {
+	visible = {
 	tag = GER
 	MAF = {
 	is_subject_of = GER
@@ -139,7 +139,7 @@ german_MAF = { # master
 }
 
 german_MAF_subject = { # subject
-	available = {
+	visible = {
 	tag = MAF
 	is_subject_of = GER
 	}
@@ -148,7 +148,7 @@ german_MAF_subject = { # subject
 ### German Imperialism in Morocco (MOR)
 
 german_MOR = { # master
-	available = {
+	visible = {
 	tag = GER
 	MOR = {
 	is_subject_of = GER
@@ -157,7 +157,7 @@ german_MOR = { # master
 }
 
 german_MOR_subject = { # subject
-	available = {
+	visible = {
 	tag = MOR
 	is_subject_of = GER
 	}
@@ -169,7 +169,7 @@ german_MOR_subject = { # subject
 ### this probably won't recieve any content before the China rework
 
 german_AOG = { # master
-	available = {
+	visible = {
 	tag = GER
 	AOG = {
 	is_subject_of = GER
@@ -178,7 +178,7 @@ german_AOG = { # master
 }
 
 german_AOG_subject = { # subject
-	available = {
+	visible = {
 	tag = AOG
 	is_subject_of = GER
 	}
@@ -187,7 +187,7 @@ german_AOG_subject = { # subject
 ### German Imperialism in South East Asia (GEA)
 
 german_GEA = { # master
-	available = {
+	visible = {
 	tag = GER
 	GEA = {
 	is_subject_of = GER
@@ -196,7 +196,7 @@ german_GEA = { # master
 }
 
 german_GEA_subject = { # subject
-	available = {
+	visible = {
 	tag = GEA
 	is_subject_of = GER
 	}
@@ -208,7 +208,7 @@ german_GEA_subject = { # subject
 ### general category for German subjects
 
 german_subject_cat = {
-	available = {
+	visible = {
 	is_subject_of = GER
 	}
 }

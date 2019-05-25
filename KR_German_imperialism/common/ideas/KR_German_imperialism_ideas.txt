@@ -1,0 +1,29 @@
+### ideas for 'Kaiserreich SubMod - German Imperialism'
+### by MEEEB
+### v1
+
+### I quickly did this to fix the broken rev4 release
+
+
+ideas = {
+	
+	country = { # National Spirits
+
+	GER_is_exploiting_us = { # for the exploited subject
+	modifier = {
+	consumer_goods_factor = 0.15 # may use something else later
+	stability_weekly_factor = -0.005
+	}
+	picture = state_economy # from KR
+	}
+
+
+	GER_exploiting_sub = {
+	modifier = {
+	consumer_goods_factor = -0.05 # bit weaker since GER's economy is way larger
+	political_power_gain = -0.05 # the cost
+	}
+	picture	= state_economy # from KR
+	}
+	}
+}

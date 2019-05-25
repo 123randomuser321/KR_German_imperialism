@@ -1,7 +1,10 @@
-### Events for 'Kaiserreich SubMod - German Imperialism'
+﻿### Events for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev4
-### fully implemented Wallonia issue events
+### v1 rev4.1
+### forget a comment
+### quick insertion of ideas
+### removed an instance of mean_time_to_happen
+### fixed gerimperialism.2 (forwarded from the decision)
 
 
 ### all numbers are subject to change
@@ -52,7 +55,7 @@ country_event = {
 	option = {
 	name = gerimperialism.2.a
 	send_equipment = {
-	type = support_weapons
+	type = support_tech
 	amount = 250
 	target = FROM # see above
 	}
@@ -194,6 +197,8 @@ country_event = { # sub gets extorted
 	name = gerimperialism.8.a
 	add_political_power = -50 # ouch
 	add_stability = -0.05 # more ouch
+	add_ideas = GER_is_exploiting_us
+	GER = { add_ideas = GER_exploiting_sub }
 	hidden_effect = {
 	set_country_flag = GER_exploited_us
 	}
@@ -210,6 +215,8 @@ country_event = { # extortion ends
 	option = {
 	name = gerimperialism.9.a
 	add_political_power = -10
+	remove_ideas = GER_is_exploiting_us
+	GER = { remove_ideas = GER_exploiting_sub }
 	}
 }
 
@@ -263,7 +270,7 @@ country_event = { # Adalbert loses the territory, final edition
 	}
 }
 
-country_event = { Grand Duchy of Luxemburg claims Deutsch-Wallonien
+country_event = { # Grand Duchy of Luxemburg claims Deutsch-Wallonien
 	id = gerimperialism.302
 	title = gerimperialism.302.t
 	desc = gerimperialism.302.d
@@ -286,8 +293,6 @@ country_event = { # Bundestag recognizes Charlotte's claim
 	desc = gerimperialism.303.d
 
 	is_triggered_only = yes
-
-	mean_time_to_happen = { days = 2 }
 
 	option = {
 	name = gerimperialism.303.a
@@ -413,8 +418,8 @@ country_event = { # random industrial investments during integration of German W
 
 	option = {
 	name = gerimperialism.311.a
-	add_extra_state_shared_building_slots = 3 # safety reasons
 	741 = {
+	add_extra_state_shared_building_slots = 3 # safety reasons
 	add_building_construction = { # 2 civs
 	type = industrial_complex
 	level = 2
