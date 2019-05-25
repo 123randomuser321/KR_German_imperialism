@@ -1,8 +1,9 @@
 If this is all on one line, blame Windows.
 ### notes
 ### by MEEEB
-### v1 rev4
-### update and typo
+### v1 rev4.1
+### added missing files
+### modified the Disclaimer
 
 Hello reader!
 
@@ -11,7 +12,7 @@ This doc is quick rundown on sources plus some general dev notes.
 
 Disclaimer:
 All of the Kaiserreich Mod belongs to the Kaiserreich team and their members.
-This is just a Submod that interacts with their code and sometimes reuses some of their code (think country_flags).
+This is just a Submod that interacts with and sometimes reuses code and/or gfx.
 This mod is subject to the Kaiserreich Usage Policy, found at:
 https://kaiserreich.fandom.com/wiki/Usage_Policy
 
@@ -40,10 +41,12 @@ Files added:
 
 /common/decisions/categories/KR_German_imperialism_decision_categories.txt
 /common/decisions/KR_German_imperialism_decisions.txt
+/common/ideas/KR_German_imperialism_ideas.txt
 /events/KR_German_imperialism_events.txt
 /localisation/KR_German_imperialism_decision_categories_l_english.yml
 /localisation/KR_German_imperialism_decisions_l_english.yml
 /localisation/KR_German_imperialism_events_l_english.yml
+/localisation/KR_German_imperialism_ideas_l_english.yml
 /logo.jpg
 /notes_by_MEEEB.txt (this file)
 
