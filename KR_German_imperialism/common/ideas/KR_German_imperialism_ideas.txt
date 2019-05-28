@@ -1,6 +1,9 @@
 ### ideas for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1
+### v1 rev1
+### added GER_monument_to_willy_ii
+### changed state_economy to Capital_Outflow in GER_is_exploiting_us
+
 
 ### I quickly did this to fix the broken rev4 release
 
@@ -12,9 +15,9 @@ ideas = {
 	GER_is_exploiting_us = { # for the exploited subject
 	modifier = {
 	consumer_goods_factor = 0.15 # may use something else later
-	stability_weekly_factor = -0.005
+	stability_weekly = -0.005
 	}
-	picture = state_economy # from KR
+	picture = Capital_Outflow # from KR
 	}
 
 
@@ -24,6 +27,18 @@ ideas = {
 	political_power_gain = -0.05 # the cost
 	}
 	picture	= state_economy # from KR
+	}
+
+
+	GER_monument_to_willy_ii = { # memory of Willy 2, bit OP, late-game though
+	modifier = {
+	stability_factor = 0.10
+	war_support_factor = 0.10
+	army_attack_factor = 0.1
+	army_core_attack_factor = 0.1
+	army_core_defence_factor = 0.1
+	}
+	picture = GER_imperial_pride # from KR
 	}
 	}
 }

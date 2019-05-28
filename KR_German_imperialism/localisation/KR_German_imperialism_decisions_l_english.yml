@@ -1,7 +1,8 @@
 ﻿### loc for decisions of 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev4.1
-### fixes
+### v1 rev5
+### loc for Willy 2
+### loc for BAT Freikorps
 
 
 l_english:
@@ -37,7 +38,29 @@ ger_exploit_sub_civ_economy_desc:0 "Though this may haunt us later, we can dampe
 ### ger_exploit_sub_civ_economy end
 
 
+### flavor decisions
+
+### monument_to_willy_2
+monument_to_willy_2:0 "Monument to Wilhelm II."
+monument_to_willy_2_desc:0 "Our Kaiser is dead, and Germany weeps."
+
+
 ### interactions with specific subjects
+
+### BAT
+
+### BAT raises German freikorps
+BAT_raise_freikorps_general:0 "Rally the Freikorps!"
+BAT_raise_freikorps_general_desc:0 "We are at war! What better time than now to mobilize the German Balts?"
+
+### BAT raises German freikorps, German majority edition
+BAT_raise_freikorps_germanized:0 "Rally the Freikorps!"
+BAT_raise_freikorps_germanized_desc:0 "We are at war! It is time for all Baltic Germans to take up arms!"
+
+### BAT demobilizes Freikorps
+BAT_demobilize_freikorps:0 "Freikorps demobilizing"
+BAT_demobilize_freikorps_desc:0 "With the war over and the situation under our control, the Freikorps are steadily returning to their civilian lives."
+
 
 ### BEL
 

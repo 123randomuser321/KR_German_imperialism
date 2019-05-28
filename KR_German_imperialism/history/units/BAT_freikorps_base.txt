@@ -1,0 +1,53 @@
+﻿### From 'Kaiserreich SubMod - German Imperialism'
+### by MEEEB
+### v1
+
+
+### this oob is used to deploy the 'basic' Freikorps in BAT
+
+division_template = {
+	name = "Baltisches Freikorps"
+
+	is_locked = yes
+
+	regiments = { # infantry over militia, since Freikorps were mostly proven in combat
+	infantry = { x = 0 y = 0 }
+	infantry = { x = 0 y = 1 }
+	infantry = { x = 0 y = 2 }
+	infantry = { x = 1 y = 0 }
+	infantry = { x = 1 y = 1 }
+	infantry = { x = 1 y = 2 }
+	}
+
+	support = { # used to trenches
+	engineer = { x = 0 y = 0 }
+	}
+}
+
+
+units = { # their names all start with Truppe (unit), since this is more or less a govt effort
+	
+	division = {
+	name = "Truppe Riga"
+	location = 9340 # Riga
+	division_template = "Baltisches Freikorps"
+	start_experience_factor = 1.0 # consider them settled Weltkrieg veterans
+	start_equipment_factor = 1.0 # fully equipped
+	}
+
+	division = {
+	name = "Truppe Reval"
+	location = 3152 # Reval
+	division_template = "Baltisches Freikorps"
+	start_experience_factor = 1.0
+	start_equipment_factor = 1.0
+	}
+
+	division = {
+	name = "Truppe Libau"
+	location = 9262 # Libau
+	division_template = "Baltisches Freikorps"
+	start_experience_factor = 1.0
+	start_equipment_factor = 1.0
+	}
+}

@@ -1,10 +1,8 @@
 ﻿### Events for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev4.1
-### forget a comment
-### quick insertion of ideas
-### removed an instance of mean_time_to_happen
-### fixed gerimperialism.2 (forwarded from the decision)
+### v1 rev5
+### added .10, .11 (monument to Willy)
+### added .12, .13 (Freikorps for BAT)
 
 
 ### all numbers are subject to change
@@ -223,7 +221,68 @@ country_event = { # extortion ends
 ### industrial recovery end
 
 
+### some flavor stuff
+
+country_event = { # Monument to Willy 2 started
+	id = gerimperialism.10
+	title = gerimperialism.10.t
+	desc = gerimperialism.10.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = gerimperialism.10.a
+	add_political_power = 20
+	}
+}
+
+country_event = { # monument finished
+	id = gerimperialism.11
+	title = gerimperialism.11.t
+	desc = gerimperialism.11.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = gerimperialism.11.a
+	add_political_power = 50
+	add_ideas = GER_monument_to_willy_ii
+	}
+}
+
+
 ### interactions with specific subjects
+
+
+### GER and BAT
+
+### BAT Freikorps
+
+country_event = { # general Freikorps
+	id = gerimperialism.12
+	title = gerimperialism.12.t
+	desc = gerimperialism.12.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = gerimperialism.12.a
+	add_political_power = 50
+	}
+}
+
+country_event = { # Germanized Freikorps
+	id = gerimperialism.13
+	title = gerimperialism.13.t
+	desc = gerimperialism.13.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = gerimperialism.13.a
+	add_political_power = 50
+	}
+}
 
 
 ### GER and BEL

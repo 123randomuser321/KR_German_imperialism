@@ -1,10 +1,8 @@
 ### Decisions for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev4.1
-### targeted decision broke
-### typos
-### available --> visible
-### fixed support equipment
+### v1 rev5
+### added an event for a monument to Willy 2
+### added BAT ability to raise German troops
 ### WALLONIA ISSUE ONLY WORKS IF YOU ALLOW MAJOR NEWS EVENTS ###
 
 
@@ -52,6 +50,24 @@ german_imperialism = {
 
 	remove_effect = {
 	hidden_effect = { set_country_flag = GER_industrial_rec_plan }
+	}
+	}
+
+
+	monument_to_willy_2 = { # After Willy's death --> monument in Berlin
+
+	visible = {
+	has_global_flag = wilhelmiided # set by KR's gerdom.47.a
+	}
+
+	complete_effect = {
+	country_event = gerimperialism.10
+	}
+
+	days_remove = 14 # subject to change
+
+	remove_effect = {
+	country_event = gerimperialism.11
 	}
 	}
 
@@ -174,6 +190,95 @@ german_industrial_rec = {
 
 
 ### specific German subjects (sorted by tag)
+
+### BAT
+
+german_BAT_subject = { # decisions for BAT
+	
+	BAT_raise_freikorps_general = { # raise some German Freikorps
+
+	visible = {
+	has_war = yes
+	NOT = {
+	has_country_flag = BAT_raised_freikorps # set by this and others
+	has_idea = BAT_german_majority # from KR focus BAT_Ger_Baltic
+	}
+	}
+
+	available = {
+	NOT = { has_country_flag = BAT_raising_freikorps } # sanity check
+	}
+
+	cost = 10 # think some propaganda and org
+
+	days_remove = 3
+
+	complete_effect = {
+	set_country_flag = BAT_raising_freikorps
+	}
+
+	remove_effect = {
+	hidden_effect = {
+	load_oob = "BAT_freikorps_base"
+	set_country_flag = BAT_raised_freikorps
+	clr_country_flag = BAT_raising_freikorps
+	}
+	country_event = gerimperialism.12 # flavor
+	}
+	}
+
+
+	BAT_raise_freikorps_germanized = { # raise some German Freikorps, German majority edition
+
+	visible = {
+	has_war = yes
+	has_idea = BAT_german_majority # from KR focus BAT_Ger_Baltic
+	NOT = { has_country_flag = BAT_raised_freikorps }
+	}
+
+	available = {
+	NOT = { has_country_flag = BAT_raising_freikorps } # sanity check
+	}
+
+	cost = 10
+
+	days_remove = 3
+
+	complete_effect = {
+	set_country_flag = BAT_raising_freikorps
+	}
+
+	remove_effect = {
+	hidden_effect = {
+	load_oob = "BAT_freikorps_germanized"
+	set_country_flag = BAT_raised_freikorps
+	clr_country_flag = BAT_raised_freikorps
+	}
+	country_event = gerimperialism.13 # flavor
+	}
+	}
+
+
+	BAT_demobilize_freikorps = { # mission since my event bugged out
+
+	allowed = { tag = BAT } # is this necessary?
+
+	activation = {
+	AND = {
+	NOT = { has_war = yes }
+	has_country_flag = BAT_raised_freikorps
+	}
+	}
+
+	is_good = yes
+
+	days_mission_timeout = 14
+
+	timeout_effect = {
+	delete_unit_template_and_units = { division_template = "Baltisches Freikorps" } # hide this later
+	}
+	}
+}
 
 ### BEL
 

@@ -1,7 +1,7 @@
 ﻿### idea loc for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1
-### two ideas
+### v1 rev 1
+### loc for GER_monument_to_willy_ii
 
 
 l_english:
@@ -14,3 +14,10 @@ GER_is_exploiting_us_desc:0 "The ungrateful cretins in [GER.Capital.GetName] are
 ### German idea for exploitative gains
 GER_exploiting_sub:0 "Dampening the fall"
 GER_exploiting_sub_desc:0 "Although not the most honorable move, acquiring economic assets from our subjects indeed helps our economy."
+
+
+### flavor stuff
+
+### Willy 2 monument
+GER_monument_to_willy_ii:0 "Memories of the Kaiser"
+GER_monument_to_willy_ii_desc:0 "Wilhelm II., who whethered the storm of the Weltkrieg with, who guided us into victory, has left the mortal realm. As he watches us from the skies, we shall keep his memory alive like an eternal flame!"
