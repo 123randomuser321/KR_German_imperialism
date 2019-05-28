@@ -1,8 +1,9 @@
 ﻿### loc for events of 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev5
+### v1 rev5.1
 ### loc for .10 and .11 (monument to Willy)
 ### loc for .12, .13 (Freikorps for BAT)
+### removed leftover .14 loc
 
 
 l_english:
@@ -101,12 +102,6 @@ gerimperialism.12.a:0 "Excellent!"
 gerimperialism.13.t:0 "Freikorps mobilized!"
 gerimperialism.13.d:0 "As intended, German veterans all over [BAT.GetNameDef] heeded our call to arms and rallied under our banner!"
 gerimperialism.13.a:0 "Excellent!"
-
-### Demobilize Freikorps
-gerimperialism.14.t:0 "Freikorps lay down arms"
-gerimperialism.14.d:0 "With the war over and the situation stabilizing, the German Freikorps have returned to their civilian lives."
-gerimperialism.14.a:0 "Let them get some well-deserved rest."
-gerimperialism.14.ta:0 "§RAll Freikorps will demobilize. You will be able to raise them in the event of another war, if necessary.§!"
 
 ### BEL
 

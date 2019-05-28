@@ -1,9 +1,10 @@
 If this is all on one line, blame Windows.
 ### notes
 ### by MEEEB
-### v1 rev4.1
-### added missing files
-### modified the Disclaimer
+### v1 rev5
+### new oobs
+### new content note
+
 
 Hello reader!
 
@@ -28,11 +29,12 @@ General notes:
 This mod gives the German Empire, as well as its subjects and allies, some form of interaction with the German sphere of influence.
 That's the goal, at least.
 
-As of now this mod does three things:
+As of now this mod does four things:
 
 1. Subjects of the German Empire can request equipment from Germany, if they lack a certain type. (This, as of now, only works for players and not all types of equipment.)
 2. Germany can now integrate and subsequently core German Wallonie (ID: 741) through a chain of decisions and events. ### THIS ONLY WORKS IF YOU ALLOW MAJOR NEWS EVENTS TO APPEAR
 3. Germany can dampen its economic crash a bit by analyzing its subjects' economies and subsequently scamming them.
+4. The Baltic Duchy can, as long as it's a a German puppet, raise Baltic German troops (as Freikorps).
 
 --->>>[WIP]<<<---
 
@@ -43,6 +45,8 @@ Files added:
 /common/decisions/KR_German_imperialism_decisions.txt
 /common/ideas/KR_German_imperialism_ideas.txt
 /events/KR_German_imperialism_events.txt
+/history/units/BAT_freikorps_base.txt
+/history/units/BAT_freikorps_germanized.txt
 /localisation/KR_German_imperialism_decision_categories_l_english.yml
 /localisation/KR_German_imperialism_decisions_l_english.yml
 /localisation/KR_German_imperialism_events_l_english.yml
