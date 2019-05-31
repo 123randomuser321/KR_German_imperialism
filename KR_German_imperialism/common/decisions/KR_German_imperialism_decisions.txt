@@ -1,8 +1,7 @@
 ### Decisions for 'Kaiserreich SubMod - German Imperialism'
 ### by MEEEB
-### v1 rev5
-### added an event for a monument to Willy 2
-### added BAT ability to raise German troops
+### v1 rev5.1
+### fire_only_once
 ### WALLONIA ISSUE ONLY WORKS IF YOU ALLOW MAJOR NEWS EVENTS ###
 
 
@@ -59,6 +58,8 @@ german_imperialism = {
 	visible = {
 	has_global_flag = wilhelmiided # set by KR's gerdom.47.a
 	}
+
+	fire_only_once = yes
 
 	complete_effect = {
 	country_event = gerimperialism.10
