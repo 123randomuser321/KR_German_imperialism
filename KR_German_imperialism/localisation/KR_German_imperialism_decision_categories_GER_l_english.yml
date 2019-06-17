@@ -1,15 +1,11 @@
 ﻿### loc for decision categories of 'Kaiserreich SubMod - German Imperialism'
+### for KR_German_imperialism_decision_categories_GER.txt
 ### by MEEEB
-### v1 rev3
-### fixed a typo
-### flavored-up some text
+### v2
+### cleanup
+
 
 l_english:
-
-### german_imperialism in general
-german_imperialism:0 "Our Place In The Sun"
-german_imperialism_desc:0 "With a place in the sun finally achieved, certain tasks regarding the security of our realm at home and beyond may arise."
-### german_imperialism end
 
 
 ### PgmU
@@ -17,57 +13,7 @@ german_PgmU:0 "Mutual Military Assistance Program"
 german_PgmU_desc:0 "The 'Programm für gegenseitige militärische Unterstützungsmaßnahmen', short PgmU, is an organized network of military infrastructure and facilities inside our sphere of influence.\n\nBy using said network, we can more efficiently deliver military aid and organize forces over both multiple command structures and large swaths of land."
 ### PgmU end
 
-
 ### German temporary recovery from Black Monday
 german_industrial_rec:0 "Kommission für wirtschaftliche Rehabilitierung"
 german_industrial_rec_desc:0 "Following the decision to enact emergency recovery measures in an attempt to weaken the effects of the Black Week, the newly established 'Commission for Industrial Recovery Measures' needs to get to work."
 ### German temp recovery end
-
-
-### German Imperialism in specific tags
-### BAT
-german_BAT:0 "Matters of [BAT.GetNameDef]"
-german_BAT_desc:0 "Our subjects require constant attention and supervision. Even the domain of Adolf Friedrich, the most German of our subjects, is no exception."
-german_BAT_subject:0 "[BAT.GetNameDef] in the German realm"
-german_BAT_subject_desc:0 "Being the Ostwall of Germany, we have certain obligations towards the security of Mitteleuropa."
-### BEL
-german_BEL:0 "Matters of [BEL.GetNameDef]"
-german_BEL_desc:0 "Flanders-Wallonia is, without a doubt, a delicate subject. While its creation was most certainly necessary, our western frontier is far from perfect."
-german_BEL_subject:0 "[BEL.GetNameDef] in the German realm"
-german_BEL_subject_desc:0 "Our relationship with the Germans is a peculiar one. We are, without a doubt, the Westwall of the German sphere. We are also, however, a battleground in itself."
-### LIT
-german_LIT:0 "Matters of [LIT.GetNameDef]"
-german_LIT_desc:0 "Lithuania is a tough nut to crack. While we liberated them from Russian oppression, they are far from grateful and thus a pain to deal with."
-german_LIT_subject:0 "[LIT.GetNameDef] in the German realm"
-german_LIT_subject_desc:0 "We are [LIT.GetNameDef], reborn in the fires of the Weltkrieg after centuries of nonexistence. We are thankful to the Germans, sure, but they need to respect us."
-### WHR
-german_WHR:0 "Matters of [WHR.GetNameDef]"
-german_WHR_desc:0 "Initially, White Ruthenia was a successful domain of ours. Sadly, the last few years have disappointed our collective expectations, thus requiring our attention."
-german_WHR_subject:0 "[WHR.GetNameDef] in the German realm"
-german_WHR_subject_desc:0 "[WHR.GetNameDef] is the odd child of the Ostwall. Carved out from the remnants of the Russian Empire, we never existed as a coherent state before. Now we must forge our identity, in Germany's shadow."
-### MAF
-german_MAF:0 "Matters of [MAF.GetNameDef]"
-german_MAF_desc:0 "While it was no mistake to send more problematic members of society to Africa, this doesn't mean we should ignore the events in such a rich area."
-german_MAF_subject:0 "[MAF.GetNameDef], home of Askaris and colonists"
-german_MAF_subject_desc:0 "[MAF.GetName] is the powderkeg of Africa. While the government in [GER.Capital.GetName] can count on loyal Askaris and skillful administrators in the old colonies, other areas lack such structures. It is our job to fix this and achieve the dream of a true German Africa."
-### MOR
-german_MOR:0 "Matters of [MOR.GetNameDef]"
-german_MOR_desc:0 "The... 'acquisition' of Morocco may be considered unnecessary by some individuals, and [MOR.GetNameDef] is certainly in a bothersome situation. One, however, cannot deny their potential use."
-german_MOR_subject:0 "[MOR.GetNameDef] in the German realm"
-german_MOR_subject_desc:0 "Some say dwelling in Germany's shadow is less than optimal. While true to a certain extent, we are kept on a long leash, which means, that, if done correctly, we can leverage the might of [GER.GetNameDef] to our gain."
-### AOG
-german_AOG:0 "Matters of [AOG.GetNameDef]"
-german_AOG_desc:0 "As our primary source of income in East Asia and a useful way of leveraging [LEP.GetNameDef] against [QIE.GetNameDef], [AOG.GetNameDef] is more than worthy of our attention and resources."
-german_AOG_subject:0 "[GER.GetNameDef] in China"
-german_AOG_subject_desc:0 "§RTODO§!"
-### GEA
-german_GEA:0 "Matters of [GEA.GetNameDef]"
-german_GEA_desc:0 "Though not formally a state on its own, [GEA.GetNameDef] is, out of necessity, run as such. While this takes a lot of weight of our shoulders, an occasional intervention may still be required, considering the less than ideal level of administration."
-german_GEA_subject:0 "The [GEA.Capital.GetName] Administration"
-german_GEA_subject_desc:0 "[GEA.GetName] has never formally been a state, just, as some would call it, \"a navy with a country attached\". This state of affairs might never change. We can, however, change the way our business is run."
-### German Imperialism in specific tags end
-
-### german_subject_cat
-german_subject_cat:0 "Inside the German realm"
-german_subject_cat_desc:0 "Now that we find ourselves in the shadow of the German eagle, we have certain duties. And if we are able to play our cards right, opportunities may wait for us..."
-### german_subject_cat end

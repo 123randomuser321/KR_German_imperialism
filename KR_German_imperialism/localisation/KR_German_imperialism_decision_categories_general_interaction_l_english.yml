@@ -1,0 +1,16 @@
+﻿### loc for decision categories of 'Kaiserreich SubMod - German Imperialism'
+### for KR_German_imperialism_decision_categories_general_interaction.txt
+### by MEEEB
+### v1
+
+
+l_english:
+
+
+### german_imperialism in general
+german_imperialism:0 "Our Place In The Sun"
+german_imperialism_desc:0 "With a place in the sun finally achieved, certain tasks regarding the security of our realm at home and beyond may arise."
+
+### german_subject_cat
+german_subject_cat:0 "Inside the German realm"
+german_subject_cat_desc:0 "Now that we find ourselves in the shadow of the German eagle, we have certain duties. And if we are able to play our cards right, opportunities may wait for us..."
