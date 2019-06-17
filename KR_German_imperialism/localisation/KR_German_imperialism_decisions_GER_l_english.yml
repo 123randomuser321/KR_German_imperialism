@@ -1,23 +1,14 @@
 ﻿### loc for decisions of 'Kaiserreich SubMod - German Imperialism'
+### for KR_German_imperialism_decisions_GER.txt
 ### by MEEEB
-### v1 rev5
-### loc for Willy 2
-### loc for BAT Freikorps
+### v2
+### cleanup
 
 
 l_english:
 
-### german_imperialism
 
-#### GER_establish_military_assistance
-#GER_establish_military_assistance:0 "Establish the 'Mutual Military Assistance Program' (PgmU)"
-#GER_establish_military_assistance_desc:0 "In hopes of increasing our military effiency, we can ask our advisors to concieve a program for mutual military aid with our subjects."
-#### GER_establish_military_assistance end
-
-### GER_hijack_industrial_recovery
-GER_hijack_industrial_recovery:0 "Draft an emergency industrial recovery plan"
-GER_hijack_industrial_recovery_desc:0 "With Black Monday shattering our industrial might, voices in our government demand an immediate industrial recovery plan, at the cost of our subjects, if necessary."
-### GER_hijack_industrial_recovery end
+### Sorting inherited from categories
 
 
 ### german_industrial_rec
@@ -25,106 +16,11 @@ GER_hijack_industrial_recovery_desc:0 "With Black Monday shattering our industri
 ### ger_reassure_banks
 ger_reassure_banks:0 "Calm the banks down"
 ger_reassure_banks_desc:0 "Some may call it a slimy move, but directly approaching the banks may stabilise our ailing monetary system in the long run."
-### ger_reassure_banks end
 
 ### ger_analyze_sub_economy
 ger_analyze_sub_economy:0 "Analyze the economy of [FROM.GetNameDef]"
 ger_analyze_sub_economy_desc:0 "To actually be able to use our network of client states to our advantage, we need to examine their economies, one by one."
-### ger_analyze_sub_economy end
 
 ### ger_exploit_sub_civ_economy
 ger_exploit_sub_civ_economy:0 "Dampen our economic collapse through [FROM.GetNameDef]"
 ger_exploit_sub_civ_economy_desc:0 "Though this may haunt us later, we can dampen our economic fall by pulling some economic levers in [FROM.GetNameDef], such as unpaid debts and exercising direct control over subsidiary companies from Germany."
-### ger_exploit_sub_civ_economy end
-
-
-### flavor decisions
-
-### monument_to_willy_2
-monument_to_willy_2:0 "Monument to Wilhelm II."
-monument_to_willy_2_desc:0 "Our Kaiser is dead, and Germany weeps."
-
-
-### interactions with specific subjects
-
-### BAT
-
-### BAT raises German freikorps
-BAT_raise_freikorps_general:0 "Rally the Freikorps!"
-BAT_raise_freikorps_general_desc:0 "We are at war! What better time than now to mobilize the German Balts?"
-
-### BAT raises German freikorps, German majority edition
-BAT_raise_freikorps_germanized:0 "Rally the Freikorps!"
-BAT_raise_freikorps_germanized_desc:0 "We are at war! It is time for all Baltic Germans to take up arms!"
-
-### BAT demobilizes Freikorps
-BAT_demobilize_freikorps:0 "Freikorps demobilizing"
-BAT_demobilize_freikorps_desc:0 "With the war over and the situation under our control, the Freikorps are steadily returning to their civilian lives."
-
-
-### BEL
-
-### integration of German Wallonia
-fate_of_german_wallonia:0 "The Fate of German Wallonia"
-fate_of_german_wallonia_desc:0 "With the Weltkrieg concluded, we must finally decide what to do with our occupied Walloon territories."
-
-prep_integration_741:0 "Prepare for integration of Walloon territories"
-prep_integration_741_desc:0 "Now that we decided to keep our Walloon territories, we must prepare to actually integrate them."
-
-luxemburg_claims_741:0 "Let Charlotte claim the territory"
-luxemburg_claims_741_desc:0 "A small, albeit necessary step towards our goal would be the Grand Duchy of Luxemburg claiming the Walloon territories."
-
-luxemburg_elite_741:0 "Invite Luxemburgian elite"
-luxemburg_elite_741_desc:0 "By granting Luxemburgian nobles land in the Walloon territories while simultaneously subsidizing their companies, we will be able to bring the territories closer to the Grand Duchy."
-
-german_elite_741:0 "Grant German nobles land"
-german_elite_741_desc:0 "Our companies might already have influence in the Walloon territories, but our nobility does not. By granting said nobles land in German Wallonia, we will give them the ability to branch off into the Grand Duchy, thus creating German bonds."
-
-public_schools_741_ger1:0 "Make German more prominent"
-public_schools_741_ger1_desc:0 "Previous efforts trying to make the Walloons embrace German have failed, mostly because it hasn't been decided if we would keep the Walloon territories, or not. This time it's different."
-
-public_schools_741_ger2:0 "Enforce German in most academic matters"
-public_schools_741_ger2_desc:0 "It is time to fully entrench German in Wallonia."
-
-attract_settlers_741:0 "Attract settlers in German Wallonia"
-attract_settlers_741_desc:0 "With ties to both the Grand Duchy of Luxemburg and ourselves firmly established, it is time to settle our Walloon territories."
-
-partial_LUX_admin_741:0 "Transfer of authority"
-partial_LUX_admin_741_desc:0 "Until now, we have directly administered our Walloon territories via the Imperial Office of the Interior (Reichsamt des Innern). While this may continue, we are ready to partially transfer administrative duties, such as taxation, to the Grand Duchy's government."
-
-final_integration_741:0 "Officially integrate German Wallonia"
-final_integration_741_desc:0 "A lot of time has passed since our initial attempts at integration. But now, the time has finally come to expand our realm westwards."
-
-remove_core_BEL_741:0 "Lingering [BEL.GetAdjective] influence"
-remove_core_BEL_741_desc:0 "The [BEL.GetAdjective] influence in Groß Luxemburg is dwindling. With a little help, it can be forever removed."
-### integration of German Wallonia done
-
-
-
-
-### german_subject_cat
-
-### request_infantry_equip_ger
-request_infantry_equip_ger:0 "Request infantry equipment from [GER.GetNameDef]"
-request_infantry_equip_ger_desc:0 "We have detected a lack of necessary equipment such as rifles and their ammunition. Maybe we should ask [GER.GetNameDef] for a shipment?"
-### request_infantry_equip_ger end
-
-### request_support_equip_ger
-request_support_equip_ger:0 "Request support equipment from [GER.GetNameDef]"
-request_support_equip_ger_desc:0 "We lack crucial medical goods and other supplies. Maybe our best option too quickly fix this, is to ask [GER.GetNameDef]."
-### request_support_equip_ger end
-
-### request_artillery_ger
-request_artillery_ger:0 "Request artillery and field guns from [GER.GetNameDef]"
-request_artillery_ger_desc:0 "We have a clear lack of artillery, with the ones we do possess being mostly outdated field guns. Some German material might help."
-### request_artillery_ger end
-
-### request_anti_tank_ger
-request_anti_tank_ger:0 "Request anti-tank guns from [GER.GetNameDef]"
-request_anti_tank_ger_desc:0 "Our arsenal of anti-tank artillery is lacking, and [GER.GetNameDef] might have some to spare."
-### request_anti_tank_ger end
-
-### request_anti_air_ger
-request_anti_air_ger:0 "Request anti-air guns from [GER.GetNameDef]"
-request_anti_air_ger_desc:0 "Our arsenal of anti-air artillery is less then satisfying. Maybe a shipment from [GER.GetNameDef] will do the trick?"
-### request_anti_air_ger end

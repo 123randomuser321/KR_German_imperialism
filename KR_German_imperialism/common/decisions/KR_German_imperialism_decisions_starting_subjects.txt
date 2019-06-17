@@ -1,0 +1,406 @@
+### Decisions for 'Kaiserreich SubMod - German Imperialism'
+### for KR_German_imperialism_decision_categories_starting_subjects.txt
+### by MEEEB
+### v1
+### WALLONIA ISSUE ONLY WORKS IF YOU ALLOW MAJOR NEWS EVENTS ###
+
+
+### Sorting inherited from categories
+
+
+### Europe
+
+### BAT
+
+german_BAT_subject = { # decisions for BAT
+	
+	BAT_raise_freikorps_general = { # raise some German Freikorps
+
+	visible = {
+	has_war = yes
+	NOT = {
+	has_country_flag = BAT_raised_freikorps # set by this and others
+	has_idea = BAT_german_majority # from KR focus BAT_Ger_Baltic
+	}
+	}
+
+	available = {
+	NOT = { has_country_flag = BAT_raising_freikorps } # sanity check
+	}
+
+	cost = 10 # think some propaganda and org
+
+	days_remove = 3
+
+	complete_effect = {
+	set_country_flag = BAT_raising_freikorps
+	}
+
+	remove_effect = {
+	hidden_effect = {
+	load_oob = "BAT_freikorps_base"
+	set_country_flag = BAT_raised_freikorps
+	clr_country_flag = BAT_raising_freikorps
+	}
+	country_event = gerimperialism.12 # flavor
+	}
+	}
+
+
+	BAT_raise_freikorps_germanized = { # raise some German Freikorps, German majority edition
+
+	visible = {
+	has_war = yes
+	has_idea = BAT_german_majority # from KR focus BAT_Ger_Baltic
+	NOT = { has_country_flag = BAT_raised_freikorps }
+	}
+
+	available = {
+	NOT = { has_country_flag = BAT_raising_freikorps } # sanity check
+	}
+
+	cost = 10
+
+	days_remove = 3
+
+	complete_effect = {
+	set_country_flag = BAT_raising_freikorps
+	}
+
+	remove_effect = {
+	hidden_effect = {
+	load_oob = "BAT_freikorps_germanized"
+	set_country_flag = BAT_raised_freikorps
+	clr_country_flag = BAT_raised_freikorps
+	}
+	country_event = gerimperialism.13 # flavor
+	}
+	}
+
+
+	BAT_demobilize_freikorps = { # mission since my event bugged out # I think this mission is broken
+
+	allowed = { tag = BAT } # is this necessary?
+
+	activation = {
+	AND = {
+	NOT = { has_war = yes }
+	has_country_flag = BAT_raised_freikorps
+	}
+	}
+
+	is_good = yes
+
+	days_mission_timeout = 14
+
+	timeout_effect = {
+	delete_unit_template_and_units = { division_template = "Baltisches Freikorps" } # hide this later
+	}
+	}
+}
+
+### BEL
+
+german_BEL = { # decisions for GER
+	
+	fate_of_german_wallonia = { # what do, after WK2
+
+	visible = {
+	owns_state = 741 # German Wallonia
+	owns_state = 8 # Luxemburg
+	NOT = { has_war = yes } # do not do territorial transfers amidst war
+	has_global_flag = war_is_hell # is set by the Second Weltkrieg news event, I have yet to find something better
+	}
+
+	fire_only_once = yes
+
+	complete_effect = {
+	country_event = gerimperialism.300
+	}
+	}
+
+
+	prep_integration_741 = { # prepare integration
+	visible = {
+	owns_state = 741
+	owns_state = 8
+	has_country_flag = GER_kept_741 # set by gerimperialism.300
+	}
+
+	fire_only_once = yes
+
+	days_remove = 7 # a week
+
+	modifier = {
+	political_power_gain = -0.25
+	}
+
+	remove_effect = {
+	hidden_effect = {
+	set_country_flag = GER_741_started
+	set_country_flag = {
+	flag = GER_741_integration # fill this and core it
+	value = 0
+	}
+	}
+	}
+	}
+
+
+	luxemburg_claims_741 = { # Charlotte wants it
+
+	visible = {
+	owns_state = 741
+	owns_state = 8
+	has_country_flag = GER_741_started
+	}
+
+	cost = 10
+
+	fire_only_once = yes
+
+	complete_effect = {
+	country_event = gerimperialism.302 # Luxemburg claim event
+	}
+	}
+
+
+	luxemburg_elite_741 = { # nobles and businessmen from Luxemburg are granted land et al
+
+	visible = {
+	owns_state = 741
+	owns_state = 8
+	has_country_flag = GER_741_claims_done # from gerimperialism.303
+	}
+
+	cost = 10
+
+	fire_only_once = yes
+
+	remove_effect = {
+	hidden_effect = {
+	set_country_flag = LUX_741_elite_settled
+	modify_country_flag = {
+	flag = GER_741_integration
+	value = 2
+	}
+	}
+	}
+
+	days_remove = 56 # 8 weeks
+
+	modifier = {
+	political_power_gain = -0.05
+	}
+	}
+
+
+	german_elite_741 = { # German nobles move in (companies are already there)
+
+	visible = {
+	owns_state = 741
+	owns_state = 8
+	has_country_flag = GER_741_claims_done # from gerimperialism.303
+	}
+
+	cost = 10
+
+	fire_only_once = yes
+
+	remove_effect = {
+	hidden_effect = {
+	set_country_flag = GER_741_elite_settled
+	modify_country_flag = {
+	flag = GER_741_integration
+	value = 1
+	}
+	}
+	}
+
+	days_remove = 84 # 12 weeks, longer since you are the oppressor
+
+	modifier = {
+	political_power_gain = -0.5
+	}
+	}
+
+
+	public_schools_741_ger1 = { # Make German a secondary language in public schools
+
+	visible = {
+	owns_state = 741
+	owns_state = 8
+	has_country_flag = GER_741_elite_settled
+	}
+
+	cost = 20
+
+	fire_only_once = yes
+
+	complete_effect = {
+	country_event = gerimperialism.304 # flavor, some explanation
+	}
+
+	remove_effect = {
+	hidden_effect = { set_country_flag = public_schools_741_partial_german }
+	}
+
+	days_remove = 250 # arbitrary
+
+	modifier = {
+	political_power_gain = -0.25
+	}
+	}
+
+
+	public_schools_741_ger2 = { # require most academic matters to be handled in German
+
+	visible = {
+	owns_state = 741
+	owns_state = 8
+	has_country_flag = public_schools_741_partial_german # set by gerimperialism.304
+	has_country_flag = {
+	flag = GER_741_integration
+	value > 6
+	}
+	}
+
+	cost = 50
+
+	fire_only_once = yes
+
+	complete_effect = {
+	country_event = gerimperialism.305 # flavor
+	}
+
+	remove_effect = {
+	hidden_effect = {
+	modify_country_flag = {
+	flag = GER_741_integration
+	value = 3
+	}
+	}
+	country_event = gerimperialism.306
+	}
+
+	days_remove = 56 # eight weeks
+	}
+
+
+	attract_settlers_741 = { # attract German and Luxemburgian settlers, i.e. workers
+
+	visible = {
+	owns_state = 741
+	owns_state = 8
+	has_country_flag = GER_741_elite_settled
+	has_country_flag = LUX_741_elite_settled
+	}
+
+	cost = 50
+
+	fire_only_once = yes
+
+	complete_effect = {
+	country_event = gerimperialism.307 # more flavor
+	}
+
+	remove_effect = {
+	hidden_effect = {
+	modify_country_flag = {
+	flag = GER_741_integration
+	value = 3
+	}
+	}
+	country_event = gerimperialism.308 # increased Germanisation
+	741 = { add_manpower = 500 } # more or less symbolic
+	}
+
+	days_remove = 365 # yes, that's a year
+
+	modifier = {
+	MONTHLY_POPULATION = -0.001 # test this
+	}
+	}
+
+
+	partial_LUX_admin_741 = { # let Charlotte partially inherit the occuational admin
+
+	visible = {
+	owns_state = 741
+	owns_state = 8
+	has_country_flag = LUX_741_elite_settled
+	}
+
+	cost = 10
+
+	fire_only_once = yes
+
+	complete_effect = {
+	country_event = gerimperialism.309 # flavor, LUX officials
+	}
+
+	remove_effect = {
+	hidden_effect = {
+	modify_country_flag = {
+	flag = GER_741_integration
+	value = 1
+	}
+	}
+	country_event = gerimperialism.310 # LUX admins settled
+	}
+
+	days_remove = 28 # four weeks
+	}
+
+
+	final_integration_741 = {
+
+	visible = {
+	owns_state = 741
+	owns_state = 8
+	has_country_flag = GER_741_final_integration
+	}
+
+	cost = 25
+
+	fire_only_once = yes
+
+	complete_effect = {
+	country_event = gerimperialism.313 # finalising integration
+	}
+
+	remove_effect = {
+	country_event = gerimperialism.314 # Core on 741, also rename it
+	}
+
+	days_remove = 28 # four weeks
+	}
+
+
+	remove_core_BEL_741 = { # remove BEL's core
+
+	visible = {
+	owns_state = 741
+	owns_state = 8
+	has_country_flag = BEL_741_timeout
+	}
+
+	fire_only_once = yes
+
+	remove_effect = {
+	741 = {
+	remove_core_of = BEL
+	add_claim_by = BEL
+	}
+	BEL = { country_event = gerimperialism.315 } # sad Adalbert
+	}
+
+	days_remove = 365 # a year
+
+	modifier = {
+	political_power_gain = -0.1
+	}
+	}
+
+	### todo: add something like additional investment (aka industrialization or something)
+}

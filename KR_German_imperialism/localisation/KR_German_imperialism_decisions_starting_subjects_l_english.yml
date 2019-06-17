@@ -1,0 +1,64 @@
+﻿### loc for decisions of 'Kaiserreich SubMod - German Imperialism'
+### for KR_German_imperialism_decisions_starting_subjects.txt
+### by MEEEB
+### v1
+
+
+l_english:
+
+
+### Sorting inherited from categories
+
+
+### Europe
+
+### BAT
+
+### BAT raises German freikorps
+BAT_raise_freikorps_general:0 "Rally the Freikorps!"
+BAT_raise_freikorps_general_desc:0 "We are at war! What better time than now to mobilize the German Balts?"
+
+### BAT raises German freikorps, German majority edition
+BAT_raise_freikorps_germanized:0 "Rally the Freikorps!"
+BAT_raise_freikorps_germanized_desc:0 "We are at war! It is time for all Baltic Germans to take up arms!"
+
+### BAT demobilizes Freikorps
+BAT_demobilize_freikorps:0 "Freikorps demobilizing"
+BAT_demobilize_freikorps_desc:0 "With the war over and the situation under our control, the Freikorps are steadily returning to their civilian lives."
+
+### BEL
+
+### integration of German Wallonia
+fate_of_german_wallonia:0 "The Fate of German Wallonia"
+fate_of_german_wallonia_desc:0 "With the Weltkrieg concluded, we must finally decide what to do with our occupied Walloon territories."
+
+prep_integration_741:0 "Prepare for integration of Walloon territories"
+prep_integration_741_desc:0 "Now that we decided to keep our Walloon territories, we must prepare to actually integrate them."
+
+luxemburg_claims_741:0 "Let Charlotte claim the territory"
+luxemburg_claims_741_desc:0 "A small, albeit necessary step towards our goal would be the Grand Duchy of Luxemburg claiming the Walloon territories."
+
+luxemburg_elite_741:0 "Invite Luxemburgian elite"
+luxemburg_elite_741_desc:0 "By granting Luxemburgian nobles land in the Walloon territories while simultaneously subsidizing their companies, we will be able to bring the territories closer to the Grand Duchy."
+
+german_elite_741:0 "Grant German nobles land"
+german_elite_741_desc:0 "Our companies might already have influence in the Walloon territories, but our nobility does not. By granting said nobles land in German Wallonia, we will give them the ability to branch off into the Grand Duchy, thus creating German bonds."
+
+public_schools_741_ger1:0 "Make German more prominent"
+public_schools_741_ger1_desc:0 "Previous efforts trying to make the Walloons embrace German have failed, mostly because it hasn't been decided if we would keep the Walloon territories, or not. This time it's different."
+
+public_schools_741_ger2:0 "Enforce German in most academic matters"
+public_schools_741_ger2_desc:0 "It is time to fully entrench German in Wallonia."
+
+attract_settlers_741:0 "Attract settlers in German Wallonia"
+attract_settlers_741_desc:0 "With ties to both the Grand Duchy of Luxemburg and ourselves firmly established, it is time to settle our Walloon territories."
+
+partial_LUX_admin_741:0 "Transfer of authority"
+partial_LUX_admin_741_desc:0 "Until now, we have directly administered our Walloon territories via the Imperial Office of the Interior (Reichsamt des Innern). While this may continue, we are ready to partially transfer administrative duties, such as taxation, to the Grand Duchy's government."
+
+final_integration_741:0 "Officially integrate German Wallonia"
+final_integration_741_desc:0 "A lot of time has passed since our initial attempts at integration. But now, the time has finally come to expand our realm westwards."
+
+remove_core_BEL_741:0 "Lingering [BEL.GetAdjective] influence"
+remove_core_BEL_741_desc:0 "The [BEL.GetAdjective] influence in Groß Luxemburg is dwindling. With a little help, it can be forever removed."
+### integration of German Wallonia done
