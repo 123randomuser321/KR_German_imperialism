@@ -1,0 +1,27 @@
+### Decision categories for 'Kaiserreich SubMod - German Imperialism'
+### this countains the decision categories for general subject and ally interaction
+### (master and subject)
+### v1
+
+
+### General German imperialism
+### Is used to unlock stuff for subcategories
+### Is also used to do things that affect every subject and/or ally
+
+german_imperialism = {
+	visible = {
+	tag = GER
+	}
+}
+
+### end german_imperialism
+
+### general category for German subjects
+
+german_subject_cat = {
+	visible = {
+	is_subject_of = GER
+	}
+}
+
+### end german_subject_cat

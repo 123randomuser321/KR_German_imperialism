@@ -3,4 +3,4 @@ path = "mod/KR_German_imperialism"
 dependencies = { "Kaiserreich" }
 picture = "logo.jpg"
 tags = { "Kaiserreich" "SubMod" "Germany" "Wild Edits" }
-supported_version = "1.6.*"
+supported_version = "1.7"
