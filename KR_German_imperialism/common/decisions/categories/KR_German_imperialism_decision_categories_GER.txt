@@ -1,0 +1,216 @@
+### Decision categories for 'Kaiserreich SubMod - German Imperialism'
+### by MEEEB
+### v1 rev4.1
+### available --> visible
+
+### General German imperialism
+### Is used to unlock stuff for subcategories
+### Is also used to do things that affect every subject and/or ally
+
+german_imperialism = {
+	visible = {
+	tag = GER
+	}
+}
+
+### end german_imperialism
+
+
+### PgmU - Programm für gegenseitige militärische Unterstützungsmaßnahmen
+
+german_PgmU = {
+	visible = {
+	tag = GER
+	has_country_flag = GER_military_aid_program
+	}
+} 
+
+### PgmU end
+
+
+### German temporary industrial recovery for Black Monday
+
+german_industrial_rec = {
+	visible = {
+	tag = GER
+	has_country_flag = GER_industrial_rec_plan
+	has_country_flag = GER_black_monday_wow # you are basically paralyzed until Black Week is over
+	OR = {
+	has_idea = GER_black_monday # put this here so that I don't clutter my decisions with this
+	has_idea = GER_black_monday1
+	has_idea = GER_black_monday2
+	}
+	}
+}
+
+### German temporary recovery end
+
+
+### German Imperialism - specific subjects
+### includes both categories for GER itself and the subjects
+
+### Initial subjects first
+
+### Europe
+
+### German Imperialism in the Baltic Duchy (BAT)
+
+german_BAT = { # master
+	visible = {
+	tag = GER
+	BAT = {
+	is_subject_of = GER
+	}
+	}
+}
+
+german_BAT_subject = { # subject
+	visible = {
+	tag = BAT
+	is_subject_of = GER
+	}
+}
+
+### German Imperialism in Flanders-Wallonia (BEL)
+
+german_BEL = { # master
+	visible = {
+	tag = GER
+	BEL = {
+	is_subject_of = GER
+	}
+	}
+}
+
+german_BEL_subject = { # subject
+	visible = {
+	tag = BEL # might need to be more specific, since actual Belgium can also be a subject
+	is_subject_of = GER
+	}
+}
+
+### German Imperialism in Lithuania (LIT)
+
+german_LIT = { # master
+	visible = {
+	tag = GER
+	LIT = {
+	is_subject_of = GER
+	}
+	}
+}
+
+german_LIT_subject = { # subject
+	visible = {
+	tag = LIT
+	is_subject_of = GER
+	}
+}
+
+### German Imperialism in White Ruthenia (WHR)
+
+german_WHR = { # master
+	visible = {
+	tag = GER
+	WHR = {
+	is_subject_of = GER
+	}
+	}
+}
+
+german_WHR_subject = { # subject
+	visible = {
+	tag = WHR
+	is_subject_of = GER
+	}
+}
+
+### Africa
+
+### German Imperialism in Mittelafrika
+
+german_MAF = { # master
+	visible = {
+	tag = GER
+	MAF = {
+	is_subject_of = GER
+	}
+	}
+}
+
+german_MAF_subject = { # subject
+	visible = {
+	tag = MAF
+	is_subject_of = GER
+	}
+}
+
+### German Imperialism in Morocco (MOR)
+
+german_MOR = { # master
+	visible = {
+	tag = GER
+	MOR = {
+	is_subject_of = GER
+	}
+	}
+}
+
+german_MOR_subject = { # subject
+	visible = {
+	tag = MOR
+	is_subject_of = GER
+	}
+}
+
+### East Asia
+
+### German Imperialism in China(?) (AOG)
+### this probably won't recieve any content before the China rework
+
+german_AOG = { # master
+	visible = {
+	tag = GER
+	AOG = {
+	is_subject_of = GER
+	}
+	}
+}
+
+german_AOG_subject = { # subject
+	visible = {
+	tag = AOG
+	is_subject_of = GER
+	}
+}
+
+### German Imperialism in South East Asia (GEA)
+
+german_GEA = { # master
+	visible = {
+	tag = GER
+	GEA = {
+	is_subject_of = GER
+	}
+	}
+}
+
+german_GEA_subject = { # subject
+	visible = {
+	tag = GEA
+	is_subject_of = GER
+	}
+}
+
+### German Imperialism - specific subjects end
+
+
+### general category for German subjects
+
+german_subject_cat = {
+	visible = {
+	is_subject_of = GER
+	}
+}
+
+### end german_subject_cat
