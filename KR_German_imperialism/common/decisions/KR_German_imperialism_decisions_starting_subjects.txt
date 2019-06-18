@@ -1,7 +1,10 @@
 ### Decisions for 'Kaiserreich SubMod - German Imperialism'
 ### for KR_German_imperialism_decision_categories_starting_subjects.txt
 ### by MEEEB
-### v1
+### v1 rev1
+### Wallonia issue now uses walloniaissue as namespace
+
+
 ### WALLONIA ISSUE ONLY WORKS IF YOU ALLOW MAJOR NEWS EVENTS ###
 
 
@@ -115,7 +118,7 @@ german_BEL = { # decisions for GER
 	fire_only_once = yes
 
 	complete_effect = {
-	country_event = gerimperialism.300
+	country_event = walloniaissue.300
 	}
 	}
 
@@ -124,7 +127,7 @@ german_BEL = { # decisions for GER
 	visible = {
 	owns_state = 741
 	owns_state = 8
-	has_country_flag = GER_kept_741 # set by gerimperialism.300
+	has_country_flag = GER_kept_741 # set by walloniaissue.300
 	}
 
 	fire_only_once = yes
@@ -160,7 +163,7 @@ german_BEL = { # decisions for GER
 	fire_only_once = yes
 
 	complete_effect = {
-	country_event = gerimperialism.302 # Luxemburg claim event
+	country_event = walloniaissue.302 # Luxemburg claim event
 	}
 	}
 
@@ -170,7 +173,7 @@ german_BEL = { # decisions for GER
 	visible = {
 	owns_state = 741
 	owns_state = 8
-	has_country_flag = GER_741_claims_done # from gerimperialism.303
+	has_country_flag = GER_741_claims_done # from walloniaissue.303
 	}
 
 	cost = 10
@@ -200,7 +203,7 @@ german_BEL = { # decisions for GER
 	visible = {
 	owns_state = 741
 	owns_state = 8
-	has_country_flag = GER_741_claims_done # from gerimperialism.303
+	has_country_flag = GER_741_claims_done # from walloniaissue.303
 	}
 
 	cost = 10
@@ -238,7 +241,7 @@ german_BEL = { # decisions for GER
 	fire_only_once = yes
 
 	complete_effect = {
-	country_event = gerimperialism.304 # flavor, some explanation
+	country_event = walloniaissue.304 # flavor, some explanation
 	}
 
 	remove_effect = {
@@ -258,7 +261,7 @@ german_BEL = { # decisions for GER
 	visible = {
 	owns_state = 741
 	owns_state = 8
-	has_country_flag = public_schools_741_partial_german # set by gerimperialism.304
+	has_country_flag = public_schools_741_partial_german # set by walloniaissue.304
 	has_country_flag = {
 	flag = GER_741_integration
 	value > 6
@@ -270,7 +273,7 @@ german_BEL = { # decisions for GER
 	fire_only_once = yes
 
 	complete_effect = {
-	country_event = gerimperialism.305 # flavor
+	country_event = walloniaissue.305 # flavor
 	}
 
 	remove_effect = {
@@ -280,7 +283,7 @@ german_BEL = { # decisions for GER
 	value = 3
 	}
 	}
-	country_event = gerimperialism.306
+	country_event = walloniaissue.306
 	}
 
 	days_remove = 56 # eight weeks
@@ -301,7 +304,7 @@ german_BEL = { # decisions for GER
 	fire_only_once = yes
 
 	complete_effect = {
-	country_event = gerimperialism.307 # more flavor
+	country_event = walloniaissue.307 # more flavor
 	}
 
 	remove_effect = {
@@ -311,7 +314,7 @@ german_BEL = { # decisions for GER
 	value = 3
 	}
 	}
-	country_event = gerimperialism.308 # increased Germanisation
+	country_event = walloniaissue.308 # increased Germanisation
 	741 = { add_manpower = 500 } # more or less symbolic
 	}
 
@@ -336,7 +339,7 @@ german_BEL = { # decisions for GER
 	fire_only_once = yes
 
 	complete_effect = {
-	country_event = gerimperialism.309 # flavor, LUX officials
+	country_event = walloniaissue.309 # flavor, LUX officials
 	}
 
 	remove_effect = {
@@ -346,7 +349,7 @@ german_BEL = { # decisions for GER
 	value = 1
 	}
 	}
-	country_event = gerimperialism.310 # LUX admins settled
+	country_event = walloniaissue.310 # LUX admins settled
 	}
 
 	days_remove = 28 # four weeks
@@ -366,11 +369,11 @@ german_BEL = { # decisions for GER
 	fire_only_once = yes
 
 	complete_effect = {
-	country_event = gerimperialism.313 # finalising integration
+	country_event = walloniaissue.313 # finalising integration
 	}
 
 	remove_effect = {
-	country_event = gerimperialism.314 # Core on 741, also rename it
+	country_event = walloniaissue.314 # Core on 741, also rename it
 	}
 
 	days_remove = 28 # four weeks
@@ -392,7 +395,7 @@ german_BEL = { # decisions for GER
 	remove_core_of = BEL
 	add_claim_by = BEL
 	}
-	BEL = { country_event = gerimperialism.315 } # sad Adalbert
+	BEL = { country_event = walloniaissue.315 } # sad Adalbert
 	}
 
 	days_remove = 365 # a year

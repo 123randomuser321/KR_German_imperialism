@@ -1,0 +1,294 @@
+### Events for 'Kaiserreich SubMod - German Imperialism'
+### this contains all events of the Wallonia coring chain
+### by MEEEB
+### v1
+### now uses another namespace
+
+
+### new namespace
+add_namespace = walloniaissue
+### done
+
+
+### actual events
+
+
+country_event = { # The Fate of German Wallonia
+	id = walloniaissue.300 # I may move this later
+	title = walloniaissue.300.t
+	desc = walloniaissue.300.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = walloniaissue.300.a # Do Adalbert a favor and return German Wallonia
+	add_political_power = -50 # it does hurt
+	hidden_effect = {
+	BEL = { transfer_state = 741 } # BEL gets German Wallonia
+	### add some decisions for BEL regarding Walloon seperatism and such things
+	}
+	custom_effect_tooltip = walloniaissue.300.ta
+	}
+
+	option = {
+	name = walloniaissue.300.b # keep the province and its industry
+	add_political_power = 50 # Govt happy
+	BEL = { country_event = walloniaissue.301 }
+	hidden_effect = { set_country_flag = GER_kept_741 }
+	custom_effect_tooltip = walloniaissue.300.tb
+	}
+}
+
+country_event = { # Adalbert loses the territory, final edition
+	id = walloniaissue.301
+	title = walloniaissue.301.t
+	desc = walloniaissue.301.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = walloniaissue.301.a # begrudgingly concede
+	add_political_power = -100
+	### maybe add an option for counteraction later (e.g. if Adalbert implemented reforms)
+	}
+}
+
+country_event = { # Grand Duchy of Luxemburg claims Deutsch-Wallonien
+	id = walloniaissue.302
+	title = walloniaissue.302.t
+	desc = walloniaissue.302.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = walloniaissue.302.a
+	hidden_effect = {
+	741 = { add_claim_by = LUX }
+	country_event = walloniaissue.303 # Bundesrat decides
+	}
+	custom_effect_tooltip = walloniaissue.302.ta
+	}
+}
+
+country_event = { # Bundestag recognizes Charlotte's claim
+	id = walloniaissue.303
+	title = walloniaissue.303.t
+	desc = walloniaissue.303.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = walloniaissue.303.a
+	hidden_effect = {
+	#741 = { add_claim_by = GER } # state file already adds a claim
+	set_country_flag = GER_741_claims_done # for further decisions
+	}
+	custom_effect_tooltip = walloniaissue.303.ta
+	}
+}
+
+country_event = { # German is now mandatory second language
+	id = walloniaissue.304
+	title = walloniaissue.304.t
+	desc = walloniaissue.304.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = walloniaissue.304.a
+	add_political_power = 50
+	hidden_effect = {
+	modify_country_flag = {
+	flag = GER_741_integration
+	value = 2
+	}
+	}
+	}
+}
+
+country_event = { # Notification re furthering Germaninisation of academia
+	id = walloniaissue.305
+	title = walloniaissue.305.t
+	desc = walloniaissue.305.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = walloniaissue.305.a
+	}
+}
+
+country_event = { # German is now entrenched in academia
+	id = walloniaissue.306
+	title = walloniaissue.306.t
+	desc = walloniaissue.306.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = walloniaissue.306.a
+	add_political_power = 50
+	}
+}
+
+country_event = { # attracting settlers
+	id = walloniaissue.307
+	title = walloniaissue.307.t
+	desc = walloniaissue.307.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = walloniaissue.307.a
+	}
+}
+
+country_event = { # Germans and Luxemburgians settled
+	id = walloniaissue.308
+	title = walloniaissue.308.t
+	desc = walloniaissue.308.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = walloniaissue.308.a
+	add_political_power = 50
+	}
+}
+
+country_event = { # partial transfer of authority to Luxemburg
+	id = walloniaissue.309
+	title = walloniaissue.309.t
+	desc = walloniaissue.309.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = walloniaissue.309.a
+	}
+}
+
+country_event = { # Hybrid-Admin established
+	id = walloniaissue.310
+	title = walloniaissue.310.t
+	desc = walloniaissue.310.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = walloniaissue.310.a
+	add_political_power = 50
+	}
+}
+
+country_event = { # random industrial investments during integration of German Wallonia
+	id = walloniaissue.311
+	title = walloniaissue.311.t
+	desc = walloniaissue.311.d
+
+	fire_only_once = yes
+
+	trigger = {
+	tag = GER
+	has_country_flag = GER_741_integration
+	owns_state = 741
+	owns_state = 8
+	}
+
+	mean_time_to_happen = {
+	days = 365 # one year
+	}
+
+	option = {
+	name = walloniaissue.311.a
+	741 = {
+	add_extra_state_shared_building_slots = 3 # safety reasons
+	add_building_construction = { # 2 civs
+	type = industrial_complex
+	level = 2
+	instant_build = yes
+	}
+	add_building_construction = { # 1 mil
+	type = arms_factory
+	level = 1
+	instant_build = yes
+	}
+	}
+	hidden_effect = {
+	modify_country_flag = {
+	flag = GER_741_integration
+	value = 1
+	}
+	}
+	}
+}
+
+country_event = { # fires when GER has almost fully integrated 741
+	id = walloniaissue.312
+	title = walloniaissue.312.t
+	desc = walloniaissue.312.d
+
+	trigger = {
+	tag = GER
+	has_country_flag = {
+	flag = GER_741_integration
+	value = 13 # arbitrary
+	}
+	}
+
+	fire_only_once = yes
+
+	option = {
+	name = walloniaissue.312.a
+	hidden_effect = { set_country_flag = GER_741_final_integration }
+	}
+}
+
+country_event = { # explain final integration a bit
+	id = walloniaissue.313
+	title = walloniaissue.313.t
+	desc = walloniaissue.313.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = walloniaissue.313.a
+	add_political_power = 50
+	}
+}
+
+country_event = { # get the core on 741
+	id = walloniaissue.314
+	title = walloniaissue.314.t
+	desc = walloniaissue.314.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = walloniaissue.314.a
+	add_political_power = 100
+	add_stability = 0.1
+	741 = {
+	remove_claim_by = LUX
+	remove_claim_by = GER
+	add_core_of = LUX
+	add_core_of = GER
+	set_state_name = "Groß Luxemburg" # might change the name later
+	}
+	hidden_effect = { set_country_flag = BEL_741_timeout } # to remove BEL's core
+	}
+}
+
+country_event = { # sad Adalbert loses the core
+	id = walloniaissue.315
+	title = walloniaissue.315.t
+	desc = walloniaissue.315.d
+
+	is_triggered_only = yes
+
+	option = {
+	name = walloniaissue.315.a
+	add_political_power = -100
+	add_stability = -0.1
+	}
+}
